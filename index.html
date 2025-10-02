@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPIS | Health Innovation Research Group</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+    <!-- Scroll Progress Bar -->
+    <div id="progressBar">
+        <div id="progressBar-indicator"></div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header fixed top-0 left-0 w-full bg-white z-40 shadow-xl transition-shadow duration-300" id="header">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <!-- Logo area -->
+            <a href="#home" class="flex items-center">
+                <img src="images/logo.png" 
+                     alt="GPIS Research Group Logo" 
+                     class="h-12 w-auto rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                >
+            </a>
+            <nav class="nav hidden md:flex space-x-10 text-lg font-semibold">
+                <a href="#group" class="text-gray-700 hover:text-var(--color-primary) relative transition-all duration-300 group">
+                    Group
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-var(--color-accent) transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                </a>
+                <a href="#members" class="text-gray-700 hover:text-var(--color-primary) relative transition-all duration-300 group">
+                    Members
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-var(--color-accent) transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                </a>
+                <a href="#projects" class="text-gray-700 hover:text-var(--color-primary) relative transition-all duration-300 group">
+                    Projects
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-var(--color-accent) transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                </a>
+                <a href="#impact" class="text-gray-700 hover:text-var(--color-primary) relative transition-all duration-300 group">
+                    Impact
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-var(--color-accent) transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                </a>
+                <a href="#news" class="text-gray-700 hover:text-var(--color-primary) relative transition-all duration-300 group">
+                    News
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-var(--color-accent) transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                </a>
+                <a href="#contact" class="text-gray-700 hover:text-var(--color-primary) relative transition-all duration-300 group">
+                    Contact
+                    <span class="absolute left-0 bottom-0 w-full h-0.5 bg-var(--color-accent) transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+                </a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-3xl text-gray-800 hover:text-var(--color-primary)">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Slider Section -->
+    <section class="hero-slider" id="home">
+        <!-- Slide 1: Focus on Epidemiology -->
+        <div class="slide slide-active" style="background-image: linear-gradient(rgba(0, 86, 179, 0.6), rgba(0, 209, 178, 0.5)), url('images/hero-slide1.jpg');">
+            <div class="slide-content">
+                <h1 class="text-6xl md:text-7xl font-extrabold text-white mb-6 tracking-wide">
+                    INNOVATION MEETS EPIDEMIOLOGY
+                </h1>
+                <p class="text-2xl text-white">Advancing traditional studies through cutting-edge technologies in Southern Brazil.</p>
+            </div>
+        </div>
+        <!-- Slide 2: Focus on Technology & Impact -->
+        <div class="slide" style="background-image: linear-gradient(rgba(0, 86, 179, 0.6), rgba(0, 209, 178, 0.5)), url('images/hero-slide2.jpg');">
+            <div class="slide-content">
+                <h1 class="text-6xl md:text-7xl font-extrabold text-white mb-6 tracking-wide">
+                    The Journey of a Generation
+                </h1>
+                <p class="text-2xl text-white">Data science and research driving profound social impact.</p>
+            </div>
+        </div>
+        <button class="slider-control prev focus:outline-none">&#10094;</button>
+        <button class="slider-control next focus:outline-none">&#10095;</button>
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <!-- Mission & Culture Section -->
+    <section class="parallax-section py-24 lg:py-36 relative" id="group" style="background-image: url('images/mission-bg.jpg');">
+        <div class="parallax-content container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-5xl">
+            <h2 class="text-5xl font-black mb-10 text-white" style="color: var(--color-primary);">Our Mission and Culture</h2>
+            <p class="text-2xl text-white leading-loose reveal-item mb-8 font-extrabold">
+                <strong class="text-white">The GPIS is a highly collaborative research group</strong> defined by its horizontal structure and strong mutual trust, where every member operates as an equal and autonomy is valued. Our mission is dual-focused: achieving high-quality scientific output and ensuring profound social impact through real-world applications to public health. This high standard demands constant innovation, as we strive to continually explore new and superior methods of conducting and applying our research.
+            </p>
+            <p class="text-xl text-white leading-loose reveal-item font-extrabold">
+                In 2025, we're pushing boundaries with AI-driven analytics and virtual reality simulations for health education, making our work more accessible and impactful.
+            </p>
+            <div class="mt-10 reveal-item">
+                <a href="#projects" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-semibold rounded-full text-white shadow-xl transition duration-300 transform hover:scale-110 hover:shadow-2xl" style="background: linear-gradient(to right, var(--color-primary), var(--color-accent));">
+                    Explore Our Impact
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section class="section py-20 lg:py-28 bg-gradient-to-b from-gray-50 to-white" id="members">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-5xl font-bold text-center mb-16" style="color:var(--color-primary);">Our Dedicated Researchers</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+                <div class="member-card reveal-item bg-white p-8 rounded-2xl shadow-xl">
+                    <img src="https://i.pravatar.cc/150?img=1" alt="Christian Loret de Mola Zanatti" class="w-32 h-32 mx-auto rounded-full object-cover mb-6 ring-4 ring-var(--color-accent) transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-2 text-center">Christian Loret de Mola Zanatti</h3>
+                    <p class="text-base text-center" style="color:var(--color-accent);">Founder and Leader</p>
+                </div>
+                <div class="member-card reveal-item bg-white p-8 rounded-2xl shadow-xl">
+                    <img src="https://i.pravatar.cc/150?img=2" alt="Rafaela Costa Martins" class="w-32 h-32 mx-auto rounded-full object-cover mb-6 ring-4 ring-var(--color-accent)">
+                    <h3 class="text-2xl font-semibold mb-2 text-center">Rafaela Costa Martins</h3>
+                    <p class="text-base text-center" style="color:var(--color-accent);">Researcher</p>
+                </div>
+                <div class="member-card reveal-item bg-white p-8 rounded-2xl shadow-xl">
+                    <img src="https://i.pravatar.cc/150?img=3" alt="Francine dos Santos Costa" class="w-32 h-32 mx-auto rounded-full object-cover mb-6 ring-4 ring-var(--color-accent)">
+                    <h3 class="text-2xl font-semibold mb-2 text-center">Francine dos Santos Costa</h3>
+                    <p class="text-base text-center" style="color:var(--color-accent);">Researcher</p>
+                </div>
+                <div class="member-card reveal-item bg-white p-8 rounded-2xl shadow-xl">
+                    <img src="https://i.pravatar.cc/150?img=4" alt="Cauane Blumenberg" class="w-32 h-32 mx-auto rounded-full object-cover mb-6 ring-4 ring-var(--color-accent)">
+                    <h3 class="text-2xl font-semibold mb-2 text-center">Cauane Blumenberg</h3>
+                    <p class="text-base text-center" style="color:var(--color-accent);">Researcher</p>
+                </div>
+                <div class="member-card reveal-item bg-white p-8 rounded-2xl shadow-xl">
+                    <img src="https://i.pravatar.cc/150?img=5" alt="Thais Martins Silva" class="w-32 h-32 mx-auto rounded-full object-cover mb-6 ring-4 ring-var(--color-accent)">
+                    <h3 class="text-2xl font-semibold mb-2 text-center">Thais Martins Silva</h3>
+                    <p class="text-base text-center" style="color:var(--color-accent);">Researcher</p>
+                </div>
+                <div class="member-card reveal-item bg-white p-8 rounded-2xl shadow-xl">
+                    <img src="https://i.pravatar.cc/150?img=6" alt="Romina Buffarini" class="w-32 h-32 mx-auto rounded-full object-cover mb-6 ring-4 ring-var(--color-accent)">
+                    <h3 class="text-2xl font-semibold mb-2 text-center">Romina Buffarini</h3>
+                    <p class="text-base text-center" style="color:var(--color-accent);">Researcher</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section py-20 lg:py-28 bg-white" id="projects">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-5xl font-bold text-center mb-16" style="color:var(--color-primary);">Our Cutting-Edge Research Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="project-card reveal-item bg-gradient-to-br from-white to-gray-100 p-10 rounded-2xl shadow-2xl border-t-8 transition duration-300" style="border-top-color: var(--color-accent);">
+                    <h3 class="text-3xl font-bold mb-4" style="color:var(--color-primary);">Rio Grande 2019 Birth Cohort: The Journey of a Generation</h3>
+                    <p class="text-gray-600 mb-8 text-lg">Tracking over 2,300 children and mothers since 2019, using AI-enhanced questionnaires to analyze family dynamics, social factors, and healthcare impacts.</p>
+                    <a href="#" class="learn-more inline-block px-6 py-3 text-white font-semibold rounded-full transition duration-300 hover:opacity-90" style="background: linear-gradient(to right, var(--color-primary), var(--color-accent));" onclick="return false;">Learn More</a>
+                </div>
+                <div class="project-card reveal-item bg-gradient-to-br from-white to-gray-100 p-10 rounded-2xl shadow-2xl border-t-8 transition duration-300" style="border-top-color: var(--color-accent);">
+                    <h3 class="text-3xl font-bold mb-4" style="color:var(--color-primary);">The Right Look: Technology and Emotion in Family Interaction</h3>
+                    <p class="text-gray-600 mb-8 text-lg">Utilizing headcams and AI to analyze real-time mother-child interactions, fostering better parental support programs.</p>
+                    <a href="#" class="learn-more inline-block px-6 py-3 text-white font-semibold rounded-full transition duration-300 hover:opacity-90" style="background: linear-gradient(to right, var(--color-primary), var(--color-accent));" onclick="return false;">Learn More</a>
+                </div>
+                <div class="project-card reveal-item bg-gradient-to-br from-white to-gray-100 p-10 rounded-2xl shadow-2xl border-t-8 transition duration-300" style="border-top-color: var(--color-accent);">
+                    <h3 class="text-3xl font-bold mb-4" style="color:var(--color-primary);">Linking the Future: Connecting Stories to Health Records</h3>
+                    <p class="text-gray-600 mb-8 text-lg">Secure data linkage with public records using advanced tech to identify healthcare gaps and improve systems.</p>
+                    <a href="#" class="learn-more inline-block px-6 py-3 text-white font-semibold rounded-full transition duration-300 hover:opacity-90" style="background: linear-gradient(to right, var(--color-primary), var(--color-accent));" onclick="return false;">Learn More</a>
+                </div>
+                <div class="project-card reveal-item bg-gradient-to-br from-white to-gray-100 p-10 rounded-2xl shadow-2xl border-t-8 transition duration-300" style="border-top-color: var(--color-accent);">
+                    <h3 class="text-3xl font-bold mb-4" style="color:var(--color-primary);">Data for Decision-Makers: Public Health Visualization</h3>
+                    <p class="text-gray-600 mb-8 text-lg">Interactive dashboards turning complex data into actionable insights for policymakers.</p>
+                    <a href="#" class="learn-more inline-block px-6 py-3 text-white font-semibold rounded-full transition duration-300 hover:opacity-90" style="background: linear-gradient(to right, var(--color-primary), var(--color-accent));" onclick="return false;">Learn More</a>
+                </div>
+                <div class="project-card reveal-item bg-gradient-to-br from-white to-gray-100 p-10 rounded-2xl shadow-2xl border-t-8 transition duration-300" style="border-top-color: var(--color-accent);">
+                    <h3 class="text-3xl font-bold mb-4" style="color:var(--color-primary);">Mental Health and Early Childhood Development (MHECD)</h3>
+                    <p class="text-gray-600 mb-8 text-lg">Longitudinal study using digital tools to track mental health from pregnancy to childhood.</p>
+                    <a href="#" class="learn-more inline-block px-6 py-3 text-white font-semibold rounded-full transition duration-300 hover:opacity-90" style="background: linear-gradient(to right, var(--color-primary), var(--color-accent));" onclick="return false;">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section with Parallax -->
+    <section class="parallax-section py-24 lg:py-36" id="impact" style="background-image: url('images/impact-bg.jpg');">
+        <div class="parallax-content container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-5xl">
+            <h2 class="text-5xl font-black mb-10 text-white" style="color: var(--color-primary);">Our Global Impact</h2>
+            <p class="text-2xl text-white leading-loose reveal-item mb-8 font-extrabold">
+                Through innovative research, we've influenced public health policies, improved maternal care, and advanced AI in epidemiology, impacting thousands in Brazil and beyond.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+                <div class="bg-white/95 p-10 rounded-2xl shadow-xl reveal-item">
+                    <h3 class="text-3xl font-bold" style="color: var(--color-accent);">2,300+</h3>
+                    <p class="text-gray-800">Families Tracked</p>
+                </div>
+                <div class="bg-white/95 p-10 rounded-2xl shadow-xl reveal-item">
+                    <h3 class="text-3xl font-bold" style="color: var(--color-accent);">50+</h3>
+                    <p class="text-gray-800">Publications</p>
+                </div>
+                <div class="bg-white/95 p-10 rounded-2xl shadow-xl reveal-item">
+                    <h3 class="text-3xl font-bold" style="color: var(--color-accent);">10+</h3>
+                    <p class="text-gray-800">Policy Changes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="section py-20 lg:py-28 bg-gray-50" id="news">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-5xl font-bold text-center mb-16" style="color: var(--color-primary);">Latest News & Updates</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="news-card reveal-item bg-white p-8 rounded-2xl shadow-xl transition duration-300 hover:scale-105">
+                    <img src="images/news1.jpg" alt="News 1" class="w-full h-48 object-cover rounded-t-2xl mb-4">
+                    <h3 class="text-2xl font-bold mb-4">AI Breakthrough in Health Data Analysis</h3>
+                    <p class="text-gray-600">Our team develops new AI model for predictive epidemiology, published in top journal.</p>
+                </div>
+                <div class="news-card reveal-item bg-white p-8 rounded-2xl shadow-xl transition duration-300 hover:scale-105">
+                    <img src="images/news2.jpg" alt="News 2" class="w-full h-48 object-cover rounded-t-2xl mb-4">
+                    <h3 class="text-2xl font-bold mb-4">Expansion to New Cohorts</h3>
+                    <p class="text-gray-600">Launching 2025 cohort study incorporating VR for mental health assessments.</p>
+                </div>
+                <div class="news-card reveal-item bg-white p-8 rounded-2xl shadow-xl transition duration-300 hover:scale-105">
+                    <img src="images/news3.jpg" alt="News 3" class="w-full h-48 object-cover rounded-t-2xl mb-4">
+                    <h3 class="text-2xl font-bold mb-4">International Collaboration</h3>
+                    <p class="text-gray-600">Partnering with global institutions for cross-cultural health innovation research.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section -->
+    <footer class="footer py-16" id="contact" style="background-color: var(--color-footer-bg);">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-4xl font-bold mb-6 text-white">Get In Touch</h3>
+            <p class="text-xl mb-10 max-w-2xl mx-auto text-white">
+                Interested in collaborating or learning more about our health innovation research? We'd love to hear from you.
+            </p>
+            <div class="flex flex-wrap justify-center items-center space-x-8 md:space-x-16 mb-10">
+                <a href="mailto:contact@gpis.org" class="hover:opacity-80 transition duration-300 my-3 text-xl font-semibold" style="color: var(--color-footer-link);">Email Us</a>
+                <a href="#" class="hover:opacity-80 transition duration-300 my-3 text-xl font-semibold" style="color: var(--color-footer-link);">Follow on X</a>
+                <a href="#" class="hover:opacity-80 transition duration-300 my-3 text-xl font-semibold" style="color: var(--color-footer-link);">Instagram</a>
+                <a href="#" class="hover:opacity-80 transition duration-300 my-3 text-xl font-semibold" style="color: var(--color-footer-link);">Facebook</a>
+                <a href="#" class="hover:opacity-80 transition duration-300 my-3 text-xl font-semibold" style="color: var(--color-footer-link);">View Publications</a>
+            </div>
+            <p class="text-base text-white mt-10">&copy; 2025 GPIS - Health Innovation Research Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
