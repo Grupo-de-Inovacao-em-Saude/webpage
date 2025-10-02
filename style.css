@@ -13,9 +13,11 @@ body {
     color: #333333;
     background-color: #FFFFFF;
     line-height: 1.6;
-    padding-top: 80px; /* Space for fixed header */
+    padding-top: 120px; /* Updated to match header height */
     overflow-x: hidden;
 }
+
+
 
 /* Scroll Progress Bar */
 #progressBar {
