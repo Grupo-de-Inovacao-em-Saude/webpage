@@ -18,11 +18,13 @@
     </div>
 
     <!-- Header & Navigation -->
-    <header class="header top-0 left-0 w-full z-40 shadow-xl transition-shadow duration-300" id="header" style="height: 120px; background: linear-gradient(to right, rgba(0, 86, 179, 0.1), rgba(0, 209, 178, 0.1));">
+    <header class="header top-0 left-0 w-full bg-white z-40 shadow-xl transition-shadow duration-300" id="header" style="height: 120px;">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
-            <!-- Logo as Back-to-Top Button -->
-            <a href="#home" class="flex items-center" onclick="scrollToTop(); return false;">
-                <img src="images/logo.png" alt="GPIS Research Group Logo" class="h-20 w-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105">
+            <!-- Logo area -->
+            <a href="#home" class="flex items-center">
+                <img src="images/logo.png" 
+                     alt="GPIS Research Group Logo" 
+                     class="h-20 w-auto object-contain rounded-lg transition-transform duration-300 hover:scale-105">
             </a>
             <nav class="nav hidden md:flex space-x-10 text-lg font-semibold items-center">
                 <a href="#group" class="text-gray-700 hover:text-var(--color-primary) relative transition-all duration-300 group">
@@ -50,8 +52,21 @@
                     <span class="absolute left-0 bottom-0 w-full h-0.5 bg-var(--color-accent) transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
                 </a>
             </nav>
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-3xl text-gray-800 hover:text-var(--color-primary) flex items-center h-full">☰</button>
+            <!-- Mobile Menu Button and Language Flags -->
+            <div class="flex items-center space-x-2">
+                <button class="md:hidden text-3xl text-gray-800 hover:text-var(--color-primary) flex items-center h-full">☰</button>
+                <!-- Language Flags -->
+                <div class="flex space-x-1">
+                    <!-- English Flag - Links to current page -->
+                    <a href="#home" class="p-1 hover:opacity-80 transition-opacity duration-300">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/32px-Flag_of_the_United_Kingdom_%283-5%29.svg.png" alt="English" class="h-6 w-6 rounded">
+                    </a>
+                    <!-- Brazilian Flag - Links to Portuguese version -->
+                    <a href="index-pt.html" class="p-1 hover:opacity-80 transition-opacity duration-300">
+                        <img src="https://www.citypng.com/public/uploads/preview/circular-round-brazil-flag-icon-transparent-png-735811695834286ym9xrpgtef.png" alt="Português" class="h-6 w-6 rounded">
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -189,7 +204,7 @@
         <div class="parallax-content container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-5xl">
             <h2 class="text-5xl font-black mb-10 text-white" style="color: var(--color-primary);">Our Global Impact</h2>
             <p class="text-2xl text-white leading-loose reveal-item mb-8 font-extrabold">
-                Through innovative research, we are wroking to influence public health policies, improved maternal care, and advanced new technologies in epidemiology, impacting thousands in Brazil and beyond.
+                Through innovative research, we've influenced public health policies, improved maternal care, and advanced AI in epidemiology, impacting thousands in Brazil and beyond.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
                 <div class="bg-white/95 p-10 rounded-2xl shadow-xl reveal-item">
@@ -215,8 +230,8 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="news-card reveal-item bg-white p-8 rounded-2xl shadow-xl transition duration-300 hover:scale-105">
                     <img src="images/ai-breakthrough.png" alt="News 1" class="w-full h-48 object-cover rounded-t-2xl mb-4">
-                    <h3 class="text-2xl font-bold mb-4">Connecting Data, Protecting Lives: GPIS Data Linkage</h3>
-                    <p class="text-gray-600">We securely and ethically merge research data with public health records, generating complete insights for more effective care</p>
+                    <h3 class="text-2xl font-bold mb-4">AI Breakthrough in Health Data Analysis</h3>
+                    <p class="text-gray-600">Our team develops new AI model for predictive epidemiology, published in top journal.</p>
                 </div>
                 <div class="news-card reveal-item bg-white p-8 rounded-2xl shadow-xl transition duration-300 hover:scale-105">
                     <img src="images/cohort-expansion.png" alt="News 2" class="w-full h-48 object-cover rounded-t-2xl mb-4">
