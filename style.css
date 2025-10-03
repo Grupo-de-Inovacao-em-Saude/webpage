@@ -1,3 +1,258 @@
+/* Header & Navigation Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 40;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    height: 120px;
+}
+
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.nav a {
+    color: #4b5563;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: var(--color-primary);
+}
+
+.nav a span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.125rem;
+    background-color: var(--color-accent);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav a:hover span {
+    transform: scaleX(1);
+}
+
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Hero Slider Styles */
+.hero-slider .slide {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slider .slide-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.25em;
+}
+
+.hero-slider .slide-content p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.slider-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.prev { left: 1rem; }
+.next { right: 1rem; }
+
+.slider-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+/* Parallax Section Styles */
+.parallax-section {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.parallax-content {
+    padding: 6rem 1rem;
+    text-align: center;
+}
+
+.parallax-content h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 2.5rem;
+    color: var(--color-primary);
+}
+
+.parallax-content p {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+/* Members Section Styles */
+.section {
+    padding: 5rem 1rem;
+}
+
+.section h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    color: var(--color-primary);
+}
+
+.member-card {
+    text-align: center;
+}
+
+.member-card img {
+    border-radius: 9999px;
+    border-width: 4px;
+    border-color: var(--color-accent);
+    transition: transform 0.3s ease;
+}
+
+.member-card a {
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.member-card a:hover {
+    color: var(--color-primary);
+}
+
+/* Projects Section Styles */
+.project-card {
+    border-top-width: 8px;
+    border-top-color: var(--color-accent);
+    transition: transform 0.3s ease;
+}
+
+.project-card h3 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.project-card p {
+    color: #4b5563;
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+}
+
+.learn-more {
+    background: linear-gradient(to right, var(--color-primary), var(--color-accent));
+    transition: opacity 0.3s ease;
+}
+
+.learn-more:hover {
+    opacity: 0.9;
+}
+
+/* Impact Section Styles */
+.parallax-content .grid div {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.parallax-content .grid h3 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+/* News Section Styles */
+.news-card {
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+.news-card img {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.news-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.news-card p {
+    color: #4b5563;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--color-footer-bg);
+    padding: 4rem 1rem;
+}
+
+.footer a {
+    color: var(--color-footer-link);
+    transition: opacity 0.3s ease;
+}
+
+.footer a:hover {
+    opacity: 0.8;
+}
+
 /* Animation Styles */
 .animate-from-left {
     opacity: 0;
@@ -24,5 +279,10 @@
     }
 }
 
-/* Ensure existing styles from your original style.css are preserved below */
-/* Add any additional custom styles here if needed */
+/* Variables (if not defined elsewhere, add these or adjust as needed) */
+:root {
+    --color-primary: #0056b3;
+    --color-accent: #00d1b2;
+    --color-footer-bg: #1f2937;
+    --color-footer-link: #93c5fd;
+}
