@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     startAutoSlide();
 });
 
-// Scroll Progress Bar
+// Scroll Progress Bar (Placeholder - Add your original implementation if available)
 function updateProgressBar() {
     const winScroll = document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
