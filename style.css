@@ -1,179 +1,28 @@
-/* Define custom Tailwind configuration */
-:root {
-    --color-primary: #0056b3; /* Vibrant Professional Blue */
-    --color-accent: #00d1b2; /* Vibrant Teal Accent */
-    --color-footer-bg: #003087; /* Darker blue for footer background */
-    --color-footer-link: #00e0c0; /* Brighter teal for footer links */
-    --font-body: 'Inter', sans-serif;
-}
-
-/* Basic Reset & Typography */
-body {
-    font-family: var(--font-body);
-    color: #333333;
-    background-color: #FFFFFF;
-    line-height: 1.6;
-    padding-top: 120px; /* Space for fixed header */
-    overflow-x: hidden;
-}
-
-/* Scroll Progress Bar */
-#progressBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #e5e7eb;
-    z-index: 50;
-}
-#progressBar-indicator {
-    height: 100%;
-    background: linear-gradient(to right, var(--color-primary), var(--color-accent));
-    width: 0%;
-    transition: width 0.1s linear;
-}
-
-/* Hero Slider Custom Styles */
-.hero-slider {
-    position: relative;
-    height: 90vh; /* Increased height for more impact */
-    overflow: hidden;
-}
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+/* Animation Styles */
+.animate-from-left {
     opacity: 0;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: scale(1.1);
-}
-.slide-active {
-    opacity: 1;
-    transform: scale(1);
-}
-.slide-content {
-    text-align: center;
-    max-width: 900px;
-    padding: 3rem;
-    background: rgba(0, 0, 0, 0.5); /* Lighter background for vibrancy */
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-}
-.slider-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.4);
-    color: white;
-    padding: 1.2rem 1.5rem;
-    border: none;
-    cursor: pointer;
-    font-size: 28px;
-    z-index: 10;
-    transition: background 0.3s, transform 0.3s;
-    border-radius: 9999px;
-}
-.slider-control:hover {
-    background: rgba(0, 0, 0, 0.7);
-    transform: translateY(-50%) scale(1.1);
-}
-.prev { left: 30px; }
-.next { right: 30px; }
-.slider-dots {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 10;
-}
-.dot {
-    height: 14px;
-    width: 14px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-.dot.active {
-    background-color: var(--color-accent);
-    transform: scale(1.2);
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* Reveal on Scroll Animation */
-.reveal-item {
+.animate-from-right {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateX(100px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
-.reveal-item.visible {
+
+.in-view {
     opacity: 1;
-    transform: translateY(0);
-}
-
-/* Parallax Section */
-.parallax-section {
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    padding: 100px 0;
-    position: relative;
-    filter: brightness(0.85); /* Slightly brighter for vibrancy */
-    backdrop-filter: blur(5px); /* Subtle blur on entire section */
-}
-.parallax-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 86, 179, 0.7), rgba(0, 209, 178, 0.6)); /* Vibrant gradient overlay */
-    z-index: 1;
-}
-.parallax-content {
-    position: relative;
-    z-index: 2;
-    padding: 2rem;
-    border-radius: 15px;
-}
-
-/* Sliding Figures on Scroll */
-.sliding-figure {
-    position: absolute;
-    transition: transform 0.5s ease-out;
-    z-index: 5;
-}
-.sliding-figure.left {
-    left: -100px;
     transform: translateX(0);
 }
-.sliding-figure.right {
-    right: -100px;
-    transform: translateX(0);
-}
-.sliding-figure.visible.left {
-    transform: translateX(150px);
-}
-.sliding-figure.visible.right {
-    transform: translateX(-150px);
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-from-left, .animate-from-right {
+        opacity: 1;
+        transform: translateX(0);
+        transition: none;
+    }
 }
 
-/* Enhanced Card Styles */
-.member-card, .project-card {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-.member-card:hover, .project-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
+/* Ensure existing styles from your original style.css are preserved below */
+/* Add any additional custom styles here if needed */
