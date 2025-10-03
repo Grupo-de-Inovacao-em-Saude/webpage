@@ -54,7 +54,7 @@
             </nav>
             <!-- Mobile Menu Button and Language Flags -->
             <div class="flex items-center space-x-2">
-                <button class="md:hidden text-3xl text-gray-700 hover:text-var(--color-primary) flex items-center h-full">☰</button>
+                <button id="mobileMenuBtn" class="md:hidden text-3xl text-gray-700 hover:text-var(--color-primary) flex items-center h-full">☰</button>
                 <!-- Language Flags -->
                 <div class="flex space-x-1">
                     <!-- English Flag - Links to current page -->
@@ -88,8 +88,8 @@
                 <p class="text-2xl text-white">Data science and research driving profound social impact.</p>
             </div>
         </div>
-        <button class="slider-control prev focus:outline-none">&#10094;</button>
-        <button class="slider-control next focus:outline-none">&#10095;</button>
+        <button class="slider-control prev focus:outline-none" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="slider-control next focus:outline-none" onclick="plusSlides(1)">&#10095;</button>
         <div class="slider-dots">
             <span class="dot active" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
