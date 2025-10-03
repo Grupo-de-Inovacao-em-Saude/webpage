@@ -23,8 +23,12 @@ function showSlides(n) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[slideIndex - 1].style.display = "flex";
+    slides[slideIndex - 1].classList.add("slide-active");
     dots[slideIndex - 1].className += " active";
 }
+
+// Auto-slide (optional, uncomment to enable)
+// setInterval(() => plusSlides(1), 5000); // Changes slide every 5 seconds
 
 // Scroll to Top Function
 function scrollToTop() {
@@ -43,8 +47,8 @@ document.addEventListener('scroll', function() {
     });
 });
 
-// Mobile Menu Toggle (Basic Implementation)
+// Mobile Menu Toggle
 document.getElementById('mobileMenuBtn').addEventListener('click', function() {
     const nav = document.querySelector('.nav');
-    nav.classList.toggle('hidden');
+    nav.classList.toggle('active');
 });
