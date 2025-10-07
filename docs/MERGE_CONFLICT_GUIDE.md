@@ -19,7 +19,10 @@ Merging the website updates from GitHub into your local `work` branch can surfac
 * Never accept an entire side without looking. Each conflict usually contains both a “current” block (your local work) and an “incoming” block (the remote update). Decide which portions of each block you actually need.
 
 ## 3. Decide how to reconcile each conflict
-* **Keep both when the sections are complementary.** Copy the essential pieces from each block and delete the markers.
+* **Keep both when the sections are complementary.** Copy the essential pieces from each block and delete the markers. For instance, when resolving
+  the `.section-card` rules in `assets/css/site.css`, keep the `position: relative;` declaration from the local branch **and** the shared card
+  styling from the remote branch. The pseudo-elements that create the parallax lighting effect depend on that positioning, so dropping it will break
+  the highlight treatment on the researcher profiles.
 * **Choose one side when the other is obsolete.** For example, if the remote branch removes an inline `<style>` that you already extracted to `assets/css/site.css`, keep your cleaned-up version and delete the outdated block.
 * **Rename or update asset paths together.** All HTML pages should load `assets/css/site.css` and `assets/js/site.js`; make sure the final conflict resolution preserves those `<link>` and `<script>` tags.
 
