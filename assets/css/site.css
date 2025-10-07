@@ -1,0 +1,148 @@
+/* Global design tokens */
+:root {
+  --primary-color: #0ea5e9; /* Sky Blue */
+  --secondary-color: #14b8a6; /* Teal */
+  --accent-color: #10b981; /* Emerald Green */
+  --text-dark: #1e293b;   /* Slate 800 for Text */
+  --text-muted: #64748b;    /* Slate 500 */
+  --bg-primary: #f8fafc;    /* Slate 50 */
+  --bg-secondary: #ffffff;  /* White */
+  --header-bg: #f1f5f9;     /* Slate 100 */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-dark);
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Navigation enhancements */
+.nav-link-effect {
+  transition: all 0.3s ease-out;
+}
+
+.nav-link-effect:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+  text-shadow: 0 4px 10px rgba(14, 165, 233, 0.4);
+}
+
+.nav-link {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Scroll progress bar */
+#scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+#scroll-progress-indicator {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* Hero slider */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Scroll-triggered animations */
+.animated-section > * {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animated-section.slide-from-left > * {
+  transform: translateX(-100px);
+}
+
+.animated-section.slide-from-right > * {
+  transform: translateX(100px);
+}
+
+.animated-section.in-view > * {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Card hover utility */
+.card-subtle-hover {
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.card-subtle-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Researcher profile cards */
+.section-card {
+  background: var(--bg-secondary);
+  border-radius: 28px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.06);
+}
+
+.info-card {
+  background: var(--bg-secondary);
+  border-radius: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.05);
+}
+
+.tag {
+  background-color: rgba(14, 165, 233, 0.14);
+  color: var(--primary-color);
+  border-radius: 9999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.accent-bar {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 9999px;
+}
