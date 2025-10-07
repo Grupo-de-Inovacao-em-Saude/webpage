@@ -50,6 +50,25 @@ document.addEventListener('DOMContentLoaded', () => {
     updateProgressBar();
   }
 
+  // Parallax background accents for profile pages
+  const parallaxLayers = document.querySelectorAll('[data-parallax]');
+  if (parallaxLayers.length > 0) {
+    const updateParallax = () => {
+      parallaxLayers.forEach((layer) => {
+        const speed = parseFloat(layer.dataset.parallax) || 0.2;
+        const container = layer.closest('[data-parallax-container]');
+        if (!container) return;
+        const rect = container.getBoundingClientRect();
+        const offset = rect.top * speed;
+        layer.style.transform = `translate3d(0, ${offset}px, 0)`;
+      });
+    };
+
+    updateParallax();
+    window.addEventListener('scroll', updateParallax, { passive: true });
+    window.addEventListener('resize', updateParallax);
+  }
+
   // Intersection observer for animated sections
   const animatedSections = document.querySelectorAll('.animated-section');
   if (animatedSections.length > 0) {
