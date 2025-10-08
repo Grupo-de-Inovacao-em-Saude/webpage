@@ -149,44 +149,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startInterval();
   }
-
-  // Interactive timelines
-  const timelines = document.querySelectorAll('[data-timeline]');
-  if (timelines.length > 0) {
-    timelines.forEach((timeline) => {
-      const triggers = timeline.querySelectorAll('[data-timeline-trigger]');
-      const panels = timeline.querySelectorAll('[data-timeline-panel]');
-
-      if (triggers.length === 0 || panels.length === 0) {
-        return;
-      }
-
-      let activeIndex = 0;
-
-      const setActive = (index) => {
-        activeIndex = index;
-        triggers.forEach((trigger, triggerIndex) => {
-          if (triggerIndex === activeIndex) {
-            trigger.classList.add('is-active');
-          } else {
-            trigger.classList.remove('is-active');
-          }
-        });
-
-        panels.forEach((panel, panelIndex) => {
-          if (panelIndex === activeIndex) {
-            panel.classList.add('is-active');
-          } else {
-            panel.classList.remove('is-active');
-          }
-        });
-      };
-
-      triggers.forEach((trigger, index) => {
-        trigger.addEventListener('click', () => setActive(index));
-      });
-
-      setActive(0);
-    });
-  }
 });
