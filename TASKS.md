@@ -1,7 +1,7 @@
 # Review Tasks
 
 ## Typo Fix
-- **Issue**: The Instagram footer link merges the `hover:text-[var(--primary-color)]` and `transition-colors` classes because a space is missing between them, preventing the transition class from applying. (See `index.html`, line 362.)
+- **Issue**: The Instagram footer link merges the `hover:text-[--primary-color]` and `transition-colors` classes because a space is missing between them, preventing the transition class from applying. (See `index.html`, line 362.)
 - **Task**: Insert the missing space so both Tailwind utility classes apply correctly.
 
 ## Bug Fix

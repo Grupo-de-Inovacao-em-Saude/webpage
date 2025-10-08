@@ -10,83 +10,6 @@
   --header-bg: #f1f5f9;     /* Slate 100 */
 }
 
-/* Utility helpers for CSS variable driven Tailwind classes */
-.text-\[var\(--text-dark\)\] {
-  color: var(--text-dark);
-}
-
-.text-\[var\(--text-muted\)\] {
-  color: var(--text-muted);
-}
-
-.text-\[var\(--primary-color\)\] {
-  color: var(--primary-color);
-}
-
-.text-\[var\(--secondary-color\)\] {
-  color: var(--secondary-color);
-}
-
-.hover\:text-\[var\(--primary-color\)\]:hover {
-  color: var(--primary-color);
-}
-
-.hover\:text-\[var\(--secondary-color\)\]:hover {
-  color: var(--secondary-color);
-}
-
-.bg-\[var\(--bg-primary\)\] {
-  background-color: var(--bg-primary);
-}
-
-.bg-\[var\(--bg-secondary\)\] {
-  background-color: var(--bg-secondary);
-}
-
-.bg-\[var\(--header-bg\)\] {
-  background-color: var(--header-bg);
-}
-
-.bg-\[var\(--bg-secondary\)\]\/90 {
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-.bg-\[var\(--bg-secondary\)\]\/95 {
-  background-color: rgba(255, 255, 255, 0.95);
-}
-
-.bg-\[var\(--header-bg\)\]\/50 {
-  background-color: rgba(241, 245, 249, 0.5);
-}
-
-.bg-\[var\(--header-bg\)\]\/95 {
-  background-color: rgba(241, 245, 249, 0.95);
-}
-
-.bg-\[var\(--accent-color\)\]\/70 {
-  background-color: rgba(16, 185, 129, 0.7);
-}
-
-.border-\[var\(--accent-color\)\] {
-  border-color: var(--accent-color);
-}
-
-.border-\[var\(--primary-color\)\] {
-  border-color: var(--primary-color);
-}
-
-.hover\:border-\[var\(--primary-color\)\]:hover {
-  border-color: var(--primary-color);
-}
-
-.group:hover .group-hover\:ring-\[var\(--accent-color\)\] {
-  --tw-ring-color: var(--accent-color);
-}
-
-.group:hover .group-hover\:text-\[var\(--primary-color\)\] {
-  color: var(--primary-color);
-}
-
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-primary);
@@ -329,6 +252,11 @@ body {
 .info-card > * {
   position: relative;
   z-index: 1;
+.info-card {
+  background: var(--bg-secondary);
+  border-radius: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.05);
 }
 
 .tag {

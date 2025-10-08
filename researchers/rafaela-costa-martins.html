@@ -8,18 +8,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/site.css">
 </head>
-<body class="min-h-screen flex flex-col bg-[var(--bg-primary)]">
-  <header class="fixed inset-x-0 top-0 z-40 border-b border-slate-200/70 bg-[var(--bg-secondary)]/90 backdrop-blur">
+<body class="min-h-screen flex flex-col bg-[--bg-primary]">
+  <header class="fixed inset-x-0 top-0 z-40 border-b border-slate-200/70 bg-[--bg-secondary]/90 backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-      <a href="../index.html" class="flex flex-col leading-tight text-[var(--text-muted)] transition hover:text-[var(--primary-color)]">
+      <a href="../index.html" class="flex flex-col leading-tight text-[--text-muted] transition hover:text-[--primary-color]">
         <span class="text-xs font-semibold uppercase tracking-[0.4em] text-gradient">GPIS</span>
         <span class="text-xs">Health Innovation Research Group</span>
+      <a href="../index.html" class="flex items-center gap-3 text-sm text-[--text-muted] transition hover:text-[--primary-color]">
+        <img src="../images/logo.png" alt="GPIS logo" class="h-10 w-auto">
+        <div class="leading-tight">
+          <p class="font-semibold text-[--text-dark]">GPIS</p>
+          <p class="text-xs">Health Innovation Research Group</p>
+        </div>
       </a>
-      <nav class="hidden items-center gap-6 text-sm font-medium text-[var(--text-muted)] md:flex">
+      <nav class="hidden items-center gap-6 text-sm font-medium text-[--text-muted] md:flex">
         <a href="../index.html#members" class="nav-link">Back to Members</a>
         <a href="../index.html#projects" class="nav-link">Projects</a>
         <a href="../index.html#news" class="nav-link">News</a>
-        <a href="mailto:rafamartins1@gmail.com" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] px-4 py-2 text-white shadow-sm transition hover:shadow-lg">
+        <a href="mailto:rafamartins1@gmail.com" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[--primary-color] to-[--accent-color] px-4 py-2 text-white shadow-sm transition hover:shadow-lg">
           <span>Contact Rafaela</span>
         </a>
       </nav>
@@ -39,14 +45,14 @@
             <article class="space-y-10">
               <div class="flex flex-col-reverse gap-8 lg:flex-row lg:items-center lg:justify-between">
                 <div class="space-y-6">
-                  <div class="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[var(--primary-color)]">
+                  <div class="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[--primary-color]">
                     <span>Researcher Profile</span>
-                    <span class="hidden h-1 w-14 rounded-full bg-[var(--accent-color)]/70 sm:block"></span>
+                    <span class="hidden h-1 w-14 rounded-full bg-[--accent-color]/70 sm:block"></span>
                     <span>GPIS</span>
                   </div>
                   <div class="space-y-3">
-                    <h1 class="text-3xl font-bold text-[var(--text-dark)] sm:text-4xl lg:text-5xl">Rafaela Costa Martins</h1>
-                    <p class="max-w-2xl text-lg text-[var(--text-muted)]">Epidemiologist examining how physical activity, stress, and violence shape health across the life span.</p>
+                    <h1 class="text-3xl font-bold text-[--text-dark] sm:text-4xl lg:text-5xl">Rafaela Costa Martins</h1>
+                    <p class="max-w-2xl text-lg text-[--text-muted]">Epidemiologist examining how physical activity, stress, and violence shape health across the life span.</p>
                   </div>
                   <div class="flex flex-wrap gap-3">
                     <span class="tag">Physical activity</span>
@@ -64,7 +70,7 @@
 
               <div class="accent-bar"></div>
 
-              <div class="space-y-6 text-base leading-relaxed text-[var(--text-muted)] animated-section slide-from-left">
+              <div class="space-y-6 text-base leading-relaxed text-[--text-muted] animated-section slide-from-left">
                 <p>Rafaela Costa Martins is an epidemiologist with training in Physical Education from the Federal University of Pelotas (UFPel), where she also completed her doctorate and postdoctoral research. She brings international experience from McMaster University (Canada) to the Human Development and Violence Research Centre (DOVE).</p>
                 <p>As a project manager and partner at Causale Consultoria, Rafaela coordinates multidisciplinary teams that study how movement behaviors, adversity, and mental health intersect. Her work combines accelerometry, biomarker analysis, and community-engaged research to understand the impacts of violence and stress on development.</p>
                 <p>Rafaela contributes to global networks including the Global Observatory for Physical Activity (GoPA!) and the Accelerometry Studies Group (GEPEA), advancing evidence that connects physical activity promotion with mental health resilience.</p>
@@ -97,111 +103,210 @@
 
             <aside class="space-y-6 animated-section slide-from-right">
               <div class="info-card p-6">
-                <h2 class="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--text-muted)]">Quick Facts</h2>
-                <dl class="mt-4 space-y-4 text-sm text-[var(--text-dark)]">
+                <h2 class="text-xs font-semibold uppercase tracking-[0.3em] text-[--text-muted]">Quick Facts</h2>
+                <dl class="mt-4 space-y-4 text-sm text-[--text-dark]">
                   <div class="flex justify-between gap-4">
-                    <dt class="text-[var(--text-muted)]">Email</dt>
-                    <dd><a href="mailto:rafamartins1@gmail.com" class="text-[var(--primary-color)] hover:text-[var(--secondary-color)]">rafamartins1@gmail.com</a></dd>
+                    <dt class="text-[--text-muted]">Email</dt>
+                    <dd><a href="mailto:rafamartins1@gmail.com" class="text-[--primary-color] hover:text-[--secondary-color]">rafamartins1@gmail.com</a></dd>
                   </div>
                   <div class="flex justify-between gap-4">
-                    <dt class="text-[var(--text-muted)]">ORCID</dt>
-                    <dd><a href="https://orcid.org/0000-0003-3538-7228" target="_blank" rel="noopener" class="text-[var(--primary-color)] hover:text-[var(--secondary-color)]">0000-0003-3538-7228</a></dd>
+                    <dt class="text-[--text-muted]">ORCID</dt>
+                    <dd><a href="https://orcid.org/0000-0003-3538-7228" target="_blank" rel="noopener" class="text-[--primary-color] hover:text-[--secondary-color]">0000-0003-3538-7228</a></dd>
                   </div>
                   <div class="flex justify-between gap-4">
-                    <dt class="text-[var(--text-muted)]">Lattes ID</dt>
-                    <dd><a href="http://lattes.cnpq.br/9081352706955381" target="_blank" rel="noopener" class="text-[var(--primary-color)] hover:text-[var(--secondary-color)]">9081352706955381</a></dd>
+                    <dt class="text-[--text-muted]">Lattes ID</dt>
+                    <dd><a href="http://lattes.cnpq.br/9081352706955381" target="_blank" rel="noopener" class="text-[--primary-color] hover:text-[--secondary-color]">9081352706955381</a></dd>
                   </div>
                   <div class="flex justify-between gap-4">
-                    <dt class="text-[var(--text-muted)]">CNPq Award</dt>
-                    <dd class="text-right text-sm text-[var(--text-muted)]">Not currently listed</dd>
+                    <dt class="text-[--text-muted]">CNPq Award</dt>
+                    <dd class="text-right text-sm text-[--text-muted]">Not currently listed</dd>
                   </div>
                 </dl>
-                <a href="http://lattes.cnpq.br/9081352706955381" target="_blank" rel="noopener" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] px-4 py-2 text-sm font-semibold text-white transition hover:shadow-lg">View Curriculum Lattes</a>
+                <a href="http://lattes.cnpq.br/9081352706955381" target="_blank" rel="noopener" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[--primary-color] to-[--accent-color] px-4 py-2 text-sm font-semibold text-white transition hover:shadow-lg">View Curriculum Lattes</a>
               </div>
 
               <div class="info-card p-6">
-                <h2 class="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--text-muted)]">Affiliations</h2>
-                <ul class="mt-4 space-y-3 text-sm text-[var(--text-dark)]">
+                <h2 class="text-xs font-semibold uppercase tracking-[0.3em] text-[--text-muted]">Affiliations</h2>
+                <ul class="mt-4 space-y-3 text-sm text-[--text-dark]">
                   <li class="flex items-start gap-3">
-                    <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[var(--primary-color)]"></span>
+                    <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[--primary-color]"></span>
                     <span>Health Innovation Research Group (GPIS), Federal University of Rio Grande (FURG)</span>
                   </li>
                   <li class="flex items-start gap-3">
-                    <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[var(--primary-color)]"></span>
+                    <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[--primary-color]"></span>
                     <span>Human Development and Violence Research Centre (DOVE), Federal University of Pelotas (UFPel)</span>
                   </li>
                   <li class="flex items-start gap-3">
-                    <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[var(--primary-color)]"></span>
+                    <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[--primary-color]"></span>
                     <span>Causale Consultoria</span>
                   </li>
                 </ul>
               </div>
 
               <div class="info-card p-6">
-                <h2 class="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--text-muted)]">Focus Areas</h2>
-                <ul class="mt-4 space-y-3 text-sm text-[var(--text-dark)]">
+                <h2 class="text-xs font-semibold uppercase tracking-[0.3em] text-[--text-muted]">Focus Areas</h2>
+                <ul class="mt-4 space-y-3 text-sm text-[--text-dark]">
                   <li class="flex items-start gap-3">
-                    <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[var(--secondary-color)]"></span>
+                    <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[--secondary-color]"></span>
                     <span>Physical activity promotion for mental health and resilience</span>
                   </li>
                   <li class="flex items-start gap-3">
-                    <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[var(--secondary-color)]"></span>
+                    <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[--secondary-color]"></span>
                     <span>Violence prevention strategies grounded in epidemiological evidence</span>
                   </li>
                   <li class="flex items-start gap-3">
-                    <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[var(--secondary-color)]"></span>
+                    <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[--secondary-color]"></span>
                     <span>Biomarkers of stress and behavior across developmental stages</span>
                   </li>
                 </ul>
               </div>
             </aside>
           </div>
+      <div class="mx-auto max-w-6xl section-card p-10 md:p-12">
+        <div class="flex flex-col gap-10 lg:grid lg:grid-cols-[minmax(0,2fr)_minmax(0,1.05fr)] lg:gap-12">
+          <article class="space-y-8">
+            <div class="flex flex-col-reverse gap-8 lg:flex-row lg:items-center lg:justify-between">
+              <div class="space-y-6">
+                <div class="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-[--primary-color]">
+                  <span>Researcher Profile</span>
+                  <span class="hidden h-1 w-14 rounded-full bg-[--accent-color]/70 sm:block"></span>
+                  <span>GPIS</span>
+                </div>
+                <div class="space-y-3">
+                  <h1 class="text-3xl font-bold text-[--text-dark] sm:text-4xl lg:text-5xl">Rafaela Costa Martins</h1>
+                  <p class="max-w-2xl text-lg text-[--text-muted]">Epidemiologist examining how physical activity, stress, and violence shape health across the life span.</p>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                  <span class="tag">Physical activity</span>
+                  <span class="tag">Stress biomarkers</span>
+                  <span class="tag">Violence prevention</span>
+                  <span class="tag">Project leadership</span>
+                </div>
+              </div>
+              <div class="flex justify-center lg:justify-end">
+                <div class="relative">
+                  <div class="absolute inset-0 -translate-x-2 translate-y-2 rounded-full bg-gradient-to-br from-[--primary-color]/20 to-[--accent-color]/10 blur-xl"></div>
+                  <img src="../images/rafaela_martins.png" alt="Portrait of Rafaela Costa Martins" class="relative z-10 h-40 w-40 rounded-full object-cover shadow-lg ring-4 ring-[--bg-secondary] outline outline-2 outline-[--primary-color]/20 md:h-48 md:w-48">
+                </div>
+              </div>
+            </div>
+
+            <div class="accent-bar"></div>
+
+            <div class="space-y-6 text-base leading-relaxed text-[--text-muted]">
+              <p>Rafaela Costa Martins is an epidemiologist with training in Physical Education from the Federal University of Pelotas (UFPel), where she also completed her doctorate and postdoctoral research. She brings international experience from McMaster University (Canada) to the Human Development and Violence Research Centre (DOVE).</p>
+              <p>As a project manager and partner at Causale Consultoria, Rafaela coordinates multidisciplinary teams that study how movement behaviors, adversity, and mental health intersect. Her work combines accelerometry, biomarker analysis, and community-engaged research to understand the impacts of violence and stress on development.</p>
+              <p>Rafaela contributes to global networks including the Global Observatory for Physical Activity (GoPA!) and the Accelerometry Studies Group (GEPEA), advancing evidence that connects physical activity promotion with mental health resilience.</p>
+            </div>
+          </article>
+
+          <aside class="space-y-6">
+            <div class="info-card p-6">
+              <h2 class="text-xs font-semibold uppercase tracking-[0.3em] text-[--text-muted]">Quick Facts</h2>
+              <dl class="mt-4 space-y-4 text-sm text-[--text-dark]">
+                <div class="flex justify-between gap-4">
+                  <dt class="text-[--text-muted]">Email</dt>
+                  <dd><a href="mailto:rafamartins1@gmail.com" class="text-[--primary-color] hover:text-[--secondary-color]">rafamartins1@gmail.com</a></dd>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <dt class="text-[--text-muted]">ORCID</dt>
+                  <dd><a href="https://orcid.org/0000-0003-3538-7228" target="_blank" rel="noopener" class="text-[--primary-color] hover:text-[--secondary-color]">0000-0003-3538-7228</a></dd>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <dt class="text-[--text-muted]">Lattes ID</dt>
+                  <dd><a href="http://lattes.cnpq.br/9081352706955381" target="_blank" rel="noopener" class="text-[--primary-color] hover:text-[--secondary-color]">9081352706955381</a></dd>
+                </div>
+                <div class="flex justify-between gap-4">
+                  <dt class="text-[--text-muted]">CNPq Award</dt>
+                  <dd class="text-right text-sm text-[--text-muted]">Not currently listed</dd>
+                </div>
+              </dl>
+              <a href="http://lattes.cnpq.br/9081352706955381" target="_blank" rel="noopener" class="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[--primary-color] to-[--accent-color] px-4 py-2 text-sm font-semibold text-white transition hover:shadow-lg">View Curriculum Lattes</a>
+            </div>
+
+            <div class="info-card p-6">
+              <h2 class="text-xs font-semibold uppercase tracking-[0.3em] text-[--text-muted]">Affiliations</h2>
+              <ul class="mt-4 space-y-3 text-sm text-[--text-dark]">
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[--primary-color]"></span>
+                  <span>Health Innovation Research Group (GPIS), Federal University of Rio Grande (FURG)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[--primary-color]"></span>
+                  <span>Human Development and Violence Research Centre (DOVE), Federal University of Pelotas (UFPel)</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[--primary-color]"></span>
+                  <span>Causale Consultoria</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="info-card p-6">
+              <h2 class="text-xs font-semibold uppercase tracking-[0.3em] text-[--text-muted]">Focus Areas</h2>
+              <ul class="mt-4 space-y-3 text-sm text-[--text-dark]">
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[--secondary-color]"></span>
+                  <span>Physical activity promotion for mental health and resilience</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[--secondary-color]"></span>
+                  <span>Violence prevention strategies grounded in epidemiological evidence</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[--secondary-color]"></span>
+                  <span>Biomarkers of stress and behavior across developmental stages</span>
+                </li>
+              </ul>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section class="mt-16 profile-directory bg-[var(--bg-secondary)]/95 py-12">
+    <section class="mt-16 profile-directory bg-[--bg-secondary]/95 py-12">
+    <section class="mt-16 border-t border-slate-200/70 bg-[--bg-secondary]/90 py-12">
       <div class="mx-auto max-w-6xl px-6">
         <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <h2 class="text-2xl font-semibold text-[var(--text-dark)]">Explore other GPIS researchers</h2>
-            <p class="mt-2 text-sm text-[var(--text-muted)]">Browse the full network to learn more about our multidisciplinary team.</p>
+            <h2 class="text-2xl font-semibold text-[--text-dark]">Explore other GPIS researchers</h2>
+            <p class="mt-2 text-sm text-[--text-muted]">Browse the full network to learn more about our multidisciplinary team.</p>
           </div>
-          <a href="../index.html#members" class="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-[var(--bg-secondary)] px-4 py-2 text-sm font-semibold text-[var(--primary-color)] shadow-sm transition hover:border-[var(--primary-color)] hover:text-[var(--secondary-color)]">Return to directory</a>
+          <a href="../index.html#members" class="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-[--bg-secondary] px-4 py-2 text-sm font-semibold text-[--primary-color] shadow-sm transition hover:border-[--primary-color] hover:text-[--secondary-color]">Return to directory</a>
         </div>
         <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <a href="christian-loret-de-mola-zanatti.html" class="group rounded-2xl border border-slate-200 bg-[var(--bg-secondary)] p-5 shadow-sm transition hover:-translate-y-1 hover:border-[var(--primary-color)] hover:shadow-lg">
-            <p class="text-sm font-semibold text-[var(--text-muted)]">Life-course Epidemiology</p>
-            <h3 class="mt-1 text-lg font-semibold text-[var(--text-dark)] group-hover:text-[var(--primary-color)]">Christian Loret de Mola Zanatti</h3>
+          <a href="christian-loret-de-mola-zanatti.html" class="group rounded-2xl border border-slate-200 bg-[--bg-secondary] p-5 shadow-sm transition hover:-translate-y-1 hover:border-[--primary-color] hover:shadow-lg">
+            <p class="text-sm font-semibold text-[--text-muted]">Life-course Epidemiology</p>
+            <h3 class="mt-1 text-lg font-semibold text-[--text-dark] group-hover:text-[--primary-color]">Christian Loret de Mola Zanatti</h3>
           </a>
-          <a href="cauane-blumenberg-silva.html" class="group rounded-2xl border border-slate-200 bg-[var(--bg-secondary)] p-5 shadow-sm transition hover:-translate-y-1 hover:border-[var(--primary-color)] hover:shadow-lg">
-            <p class="text-sm font-semibold text-[var(--text-muted)]">Data Science &amp; Epidemiology</p>
-            <h3 class="mt-1 text-lg font-semibold text-[var(--text-dark)] group-hover:text-[var(--primary-color)]">Cauane Blumenberg Silva</h3>
+          <a href="cauane-blumenberg-silva.html" class="group rounded-2xl border border-slate-200 bg-[--bg-secondary] p-5 shadow-sm transition hover:-translate-y-1 hover:border-[--primary-color] hover:shadow-lg">
+            <p class="text-sm font-semibold text-[--text-muted]">Data Science &amp; Epidemiology</p>
+            <h3 class="mt-1 text-lg font-semibold text-[--text-dark] group-hover:text-[--primary-color]">Cauane Blumenberg Silva</h3>
           </a>
-          <a href="francine-dos-santos-costa.html" class="group rounded-2xl border border-slate-200 bg-[var(--bg-secondary)] p-5 shadow-sm transition hover:-translate-y-1 hover:border-[var(--primary-color)] hover:shadow-lg">
-            <p class="text-sm font-semibold text-[var(--text-muted)]">Maternal &amp; Child Health</p>
-            <h3 class="mt-1 text-lg font-semibold text-[var(--text-dark)] group-hover:text-[var(--primary-color)]">Francine dos Santos Costa</h3>
+          <a href="francine-dos-santos-costa.html" class="group rounded-2xl border border-slate-200 bg-[--bg-secondary] p-5 shadow-sm transition hover:-translate-y-1 hover:border-[--primary-color] hover:shadow-lg">
+            <p class="text-sm font-semibold text-[--text-muted]">Maternal &amp; Child Health</p>
+            <h3 class="mt-1 text-lg font-semibold text-[--text-dark] group-hover:text-[--primary-color]">Francine dos Santos Costa</h3>
           </a>
-          <a href="thais-martins-da-silva.html" class="group rounded-2xl border border-slate-200 bg-[var(--bg-secondary)] p-5 shadow-sm transition hover:-translate-y-1 hover:border-[var(--primary-color)] hover:shadow-lg">
-            <p class="text-sm font-semibold text-[var(--text-muted)]">Life Course Nutrition</p>
-            <h3 class="mt-1 text-lg font-semibold text-[var(--text-dark)] group-hover:text-[var(--primary-color)]">Thais Martins da Silva</h3>
+          <a href="thais-martins-da-silva.html" class="group rounded-2xl border border-slate-200 bg-[--bg-secondary] p-5 shadow-sm transition hover:-translate-y-1 hover:border-[--primary-color] hover:shadow-lg">
+            <p class="text-sm font-semibold text-[--text-muted]">Life Course Nutrition</p>
+            <h3 class="mt-1 text-lg font-semibold text-[--text-dark] group-hover:text-[--primary-color]">Thais Martins da Silva</h3>
           </a>
-          <a href="romina-buffarini.html" class="group rounded-2xl border border-slate-200 bg-[var(--bg-secondary)] p-5 shadow-sm transition hover:-translate-y-1 hover:border-[var(--primary-color)] hover:shadow-lg">
-            <p class="text-sm font-semibold text-[var(--text-muted)]">Nutrition &amp; Equity</p>
-            <h3 class="mt-1 text-lg font-semibold text-[var(--text-dark)] group-hover:text-[var(--primary-color)]">Romina Buffarini</h3>
+          <a href="romina-buffarini.html" class="group rounded-2xl border border-slate-200 bg-[--bg-secondary] p-5 shadow-sm transition hover:-translate-y-1 hover:border-[--primary-color] hover:shadow-lg">
+            <p class="text-sm font-semibold text-[--text-muted]">Nutrition &amp; Equity</p>
+            <h3 class="mt-1 text-lg font-semibold text-[--text-dark] group-hover:text-[--primary-color]">Romina Buffarini</h3>
           </a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-slate-200 bg-[var(--bg-secondary)]/95 py-8">
-    <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 text-sm text-[var(--text-muted)] md:flex-row md:items-center md:justify-between">
+  <footer class="border-t border-slate-200 bg-[--bg-secondary]/95 py-8">
+    <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 text-sm text-[--text-muted] md:flex-row md:items-center md:justify-between">
       <p>&copy; <span data-current-year></span> GPIS Health Innovation Research Group. All rights reserved.</p>
       <div class="flex flex-wrap gap-4">
-        <a href="../index.html#contact" class="hover:text-[var(--primary-color)]">Contact</a>
-        <a href="../index.html#news" class="hover:text-[var(--primary-color)]">News</a>
-        <a href="../index.html#projects" class="hover:text-[var(--primary-color)]">Projects</a>
+        <a href="../index.html#contact" class="hover:text-[--primary-color]">Contact</a>
+        <a href="../index.html#news" class="hover:text-[--primary-color]">News</a>
+        <a href="../index.html#projects" class="hover:text-[--primary-color]">Projects</a>
       </div>
     </div>
   </footer>
