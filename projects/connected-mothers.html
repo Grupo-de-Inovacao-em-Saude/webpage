@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover how the GPIS Mothers Connected project tests WhatsApp-based support to improve maternal mental health, child nutrition, and caregiving confidence.">
     <title>Connected Mothers | GPIS Projects</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Work+Sans:wght@500;600;700&display=swap" rel="stylesheet">
@@ -31,6 +32,18 @@
             <a href="#support" class="block text-center py-4 px-6 text-[var(--text-dark)] bg-slate-200/50 hover:bg-slate-200">Support</a>
         </div>
     </header>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="breadcrumb__container">
+            <ol class="breadcrumb__list">
+                <li><a href="../index.html">Home</a></li>
+                <li class="breadcrumb__separator" aria-hidden="true">›</li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li class="breadcrumb__separator" aria-hidden="true">›</li>
+                <li class="breadcrumb__current" aria-current="page">Mothers Connected</li>
+            </ol>
+        </div>
+    </nav>
 
     <main class="pt-36 pb-24">
         <div class="container mx-auto px-6 space-y-16 md:space-y-24">
@@ -74,6 +87,7 @@
             </section>
 
             <section id="overview" class="project-section project-section--accent" data-parallax-container>
+                <div class="project-section__bg-image" data-parallax-background="0.1" style="background-image: url('../images/projects/connected-mothers-overview-bg.jpg');"></div>
                 <div class="project-section__background">
                     <span class="project-orb project-orb--sky project-orb--lg" data-parallax="0.2" style="top:-140px; right:-120px;"></span>
                     <span class="project-orb project-orb--emerald project-orb--md" data-parallax="0.28" style="bottom:-140px; left:-120px;"></span>
@@ -110,11 +124,58 @@
                     </div>
                     <div class="timeline">
                         <div class="timeline-track">
-                            <button type="button" class="timeline-step" data-timeline-trigger>Recruitment</button>
-                            <button type="button" class="timeline-step" data-timeline-trigger>Group assignment</button>
-                            <button type="button" class="timeline-step" data-timeline-trigger>8-week intervention</button>
-                            <button type="button" class="timeline-step" data-timeline-trigger>Evaluation</button>
-                            <button type="button" class="timeline-step" data-timeline-trigger>Scale-up</button>
+                            <button type="button" class="timeline-step" data-timeline-trigger>
+                                <span class="timeline-step__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </span>
+                                <span class="timeline-step__label">Recruitment</span>
+                            </button>
+                            <button type="button" class="timeline-step" data-timeline-trigger>
+                                <span class="timeline-step__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="6" cy="5" r="3"></circle>
+                                        <circle cx="6" cy="19" r="3"></circle>
+                                        <circle cx="18" cy="12" r="3"></circle>
+                                        <path d="M6 8v8a3 3 0 0 0 3 3h3"></path>
+                                        <path d="M9 5h5a4 4 0 0 1 4 4"></path>
+                                    </svg>
+                                </span>
+                                <span class="timeline-step__label">Group assignment</span>
+                            </button>
+                            <button type="button" class="timeline-step" data-timeline-trigger>
+                                <span class="timeline-step__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-9l-4 3v-3H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"></path>
+                                        <path d="M8 9h8"></path>
+                                        <path d="M8 13h6"></path>
+                                    </svg>
+                                </span>
+                                <span class="timeline-step__label">8-week intervention</span>
+                            </button>
+                            <button type="button" class="timeline-step" data-timeline-trigger>
+                                <span class="timeline-step__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 3h6a2 2 0 0 1 2 2v1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1V5a2 2 0 0 1 2-2z"></path>
+                                        <path d="M9 12h6"></path>
+                                        <path d="M9 16h4"></path>
+                                    </svg>
+                                </span>
+                                <span class="timeline-step__label">Evaluation</span>
+                            </button>
+                            <button type="button" class="timeline-step" data-timeline-trigger>
+                                <span class="timeline-step__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 17l5-5 4 4 7-7"></path>
+                                        <path d="M16 9h5v5"></path>
+                                    </svg>
+                                </span>
+                                <span class="timeline-step__label">Scale-up</span>
+                            </button>
                         </div>
                         <div class="timeline-panels">
                             <div class="timeline-panel" data-timeline-panel>
@@ -138,6 +199,7 @@
             </section>
 
             <section id="outcomes" class="project-section project-section--contrast" data-parallax-container>
+                <div class="project-section__bg-image" data-parallax-background="0.08" style="background-image: url('../images/projects/connected-mothers-outcomes-bg.jpg');"></div>
                 <div class="project-section__background">
                     <span class="project-orb project-orb--halo project-orb--lg" data-parallax="0.22" style="top:-190px; right:-150px;"></span>
                     <span class="project-orb project-orb--emerald project-orb--sm" data-parallax="0.32" style="bottom:-150px; left:-110px;"></span>
@@ -193,6 +255,43 @@
                     <div class="project-cta-group mt-10">
                         <a href="mailto:contact@gpis.org" class="project-cta">Start a partnership</a>
                         <a href="../index.html#contact" class="project-cta secondary">Contact GPIS</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section project-section--accent" data-parallax-container>
+                <div class="project-section__bg-image" data-parallax-background="0.09" style="background-image: url('../images/projects/connected-mothers-team-bg.jpg');"></div>
+                <div class="project-section__background">
+                    <span class="project-orb project-orb--sky project-orb--sm" data-parallax="0.22" style="top:-90px; right:-80px;"></span>
+                </div>
+                <div class="project-section__inner">
+                    <div class="project-section-header">
+                        <span class="project-badge">Project team</span>
+                        <h2 class="project-section-title">Key Researchers on This Project</h2>
+                        <p class="project-section-lead">Meet the GPIS scientists guiding the design, analytics, and implementation of Mothers Connected.</p>
+                    </div>
+                    <div class="project-key-team">
+                        <a href="../researchers/rafaela-costa-martins.html" class="project-key-team__member">
+                            <img src="../images/rafaela_martins.png" alt="Headshot of Rafaela Costa Martins" class="project-key-team__avatar">
+                            <div class="project-key-team__info">
+                                <span class="project-key-team__name">Rafaela Costa Martins</span>
+                                <span class="project-key-team__role">Digital intervention lead</span>
+                            </div>
+                        </a>
+                        <a href="../researchers/thais-martins-da-silva.html" class="project-key-team__member">
+                            <img src="../images/thais_martins.png" alt="Headshot of Thais Martins da Silva" class="project-key-team__avatar">
+                            <div class="project-key-team__info">
+                                <span class="project-key-team__name">Thais Martins da Silva</span>
+                                <span class="project-key-team__role">Maternal nutrition specialist</span>
+                            </div>
+                        </a>
+                        <a href="../researchers/cauane-blumenberg-silva.html" class="project-key-team__member">
+                            <img src="../images/cauane.png" alt="Headshot of Cauane Blumenberg Silva" class="project-key-team__avatar">
+                            <div class="project-key-team__info">
+                                <span class="project-key-team__name">Cauane Blumenberg Silva</span>
+                                <span class="project-key-team__role">Data science &amp; analytics</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>

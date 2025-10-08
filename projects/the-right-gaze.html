@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover The Right Gaze, a GPIS project using head-mounted cameras and AI to understand mother-child emotions, synchrony, and parenting support opportunities.">
     <title>The Right Gaze | GPIS Projects</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Work+Sans:wght@500;600;700&display=swap" rel="stylesheet">
@@ -31,6 +32,18 @@
             <a href="#support" class="block text-center py-4 px-6 text-[var(--text-dark)] bg-slate-200/50 hover:bg-slate-200">Support</a>
         </div>
     </header>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="breadcrumb__container">
+            <ol class="breadcrumb__list">
+                <li><a href="../index.html">Home</a></li>
+                <li class="breadcrumb__separator" aria-hidden="true">›</li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li class="breadcrumb__separator" aria-hidden="true">›</li>
+                <li class="breadcrumb__current" aria-current="page">The Right Gaze</li>
+            </ol>
+        </div>
+    </nav>
 
     <main class="pt-36 pb-24">
         <div class="container mx-auto px-6 space-y-16 md:space-y-24">
@@ -74,6 +87,7 @@
             </section>
 
             <section id="innovation" class="project-section project-section--accent" data-parallax-container>
+                <div class="project-section__bg-image" data-parallax-background="0.1" style="background-image: url('../images/projects/right-gaze-innovation-bg.jpg');"></div>
                 <div class="project-section__background">
                     <span class="project-orb project-orb--teal project-orb--lg" data-parallax="0.2" style="top:-140px; right:-120px;"></span>
                     <span class="project-orb project-orb--emerald project-orb--md" data-parallax="0.28" style="bottom:-140px; left:-110px;"></span>
@@ -157,6 +171,7 @@
             </section>
 
             <section id="support" class="project-section" data-parallax-container>
+                <div class="project-section__bg-image" data-parallax-background="0.09" style="background-image: url('../images/projects/right-gaze-support-bg.jpg');"></div>
                 <div class="project-section__background">
                     <span class="project-orb project-orb--emerald project-orb--md" data-parallax="0.22" style="top:-150px; left:-110px;"></span>
                     <span class="project-orb project-orb--sky project-orb--sm" data-parallax="0.32" style="bottom:-120px; right:-100px;"></span>
@@ -184,6 +199,43 @@
                     <div class="project-cta-group mt-10">
                         <a href="mailto:contact@gpis.org" class="project-cta">Discuss collaboration</a>
                         <a href="../index.html#contact" class="project-cta secondary">Contact GPIS</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section project-section--accent" data-parallax-container>
+                <div class="project-section__bg-image" data-parallax-background="0.08" style="background-image: url('../images/projects/right-gaze-team-bg.jpg');"></div>
+                <div class="project-section__background">
+                    <span class="project-orb project-orb--halo project-orb--sm" data-parallax="0.24" style="top:-90px; left:-70px;"></span>
+                </div>
+                <div class="project-section__inner">
+                    <div class="project-section-header">
+                        <span class="project-badge">Project team</span>
+                        <h2 class="project-section-title">Key Researchers on This Project</h2>
+                        <p class="project-section-lead">Technologists and epidemiologists collaborate to translate emotion analytics into real-world parenting support.</p>
+                    </div>
+                    <div class="project-key-team">
+                        <a href="../researchers/christian-loret-de-mola-zanatti.html" class="project-key-team__member">
+                            <img src="../images/christian-loret-de-mola-zanatti.png" alt="Headshot of Christian Loret de Mola Zanatti" class="project-key-team__avatar">
+                            <div class="project-key-team__info">
+                                <span class="project-key-team__name">Christian Loret de Mola Zanatti</span>
+                                <span class="project-key-team__role">Principal investigator</span>
+                            </div>
+                        </a>
+                        <a href="../researchers/cauane-blumenberg-silva.html" class="project-key-team__member">
+                            <img src="../images/cauane.png" alt="Headshot of Cauane Blumenberg Silva" class="project-key-team__avatar">
+                            <div class="project-key-team__info">
+                                <span class="project-key-team__name">Cauane Blumenberg Silva</span>
+                                <span class="project-key-team__role">AI &amp; sensor integration</span>
+                            </div>
+                        </a>
+                        <a href="../researchers/rafaela-costa-martins.html" class="project-key-team__member">
+                            <img src="../images/rafaela_martins.png" alt="Headshot of Rafaela Costa Martins" class="project-key-team__avatar">
+                            <div class="project-key-team__info">
+                                <span class="project-key-team__name">Rafaela Costa Martins</span>
+                                <span class="project-key-team__role">Family engagement lead</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>

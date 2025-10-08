@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how the GPIS Data Linkage project securely connects cohort interviews with official health records to validate care, close gaps, and inform policy.">
     <title>Data Linkage | GPIS Projects</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Work+Sans:wght@500;600;700&display=swap" rel="stylesheet">
@@ -31,6 +32,18 @@
             <a href="#impact" class="block text-center py-4 px-6 text-[var(--text-dark)] bg-slate-200/50 hover:bg-slate-200">Impact</a>
         </div>
     </header>
+
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="breadcrumb__container">
+            <ol class="breadcrumb__list">
+                <li><a href="../index.html">Home</a></li>
+                <li class="breadcrumb__separator" aria-hidden="true">›</li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li class="breadcrumb__separator" aria-hidden="true">›</li>
+                <li class="breadcrumb__current" aria-current="page">Data Linkage</li>
+            </ol>
+        </div>
+    </nav>
 
     <main class="pt-36 pb-24">
         <div class="container mx-auto px-6 space-y-16 md:space-y-24">
@@ -74,6 +87,7 @@
             </section>
 
             <section id="challenge" class="project-section project-section--accent" data-parallax-container>
+                <div class="project-section__bg-image" data-parallax-background="0.1" style="background-image: url('../images/projects/data-linkage-challenge-bg.jpg');"></div>
                 <div class="project-section__background">
                     <span class="project-orb project-orb--sky project-orb--lg" data-parallax="0.2" style="top:-140px; right:-120px;"></span>
                     <span class="project-orb project-orb--emerald project-orb--md" data-parallax="0.28" style="bottom:-140px; left:-110px;"></span>
@@ -144,11 +158,57 @@
                     </div>
                     <div class="timeline">
                         <div class="timeline-track">
-                            <button type="button" class="timeline-step" data-timeline-trigger>Preparation</button>
-                            <button type="button" class="timeline-step" data-timeline-trigger>Probabilistic match</button>
-                            <button type="button" class="timeline-step" data-timeline-trigger>Assisted review</button>
-                            <button type="button" class="timeline-step" data-timeline-trigger>De-identification</button>
-                            <button type="button" class="timeline-step" data-timeline-trigger>Delivery</button>
+                            <button type="button" class="timeline-step" data-timeline-trigger>
+                                <span class="timeline-step__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 3h6a2 2 0 0 1 2 2v1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1V5a2 2 0 0 1 2-2z"></path>
+                                        <path d="M9 12h6"></path>
+                                        <path d="M9 16h4"></path>
+                                    </svg>
+                                </span>
+                                <span class="timeline-step__label">Preparation</span>
+                            </button>
+                            <button type="button" class="timeline-step" data-timeline-trigger>
+                                <span class="timeline-step__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="6" cy="5" r="3"></circle>
+                                        <circle cx="6" cy="19" r="3"></circle>
+                                        <circle cx="18" cy="12" r="3"></circle>
+                                        <path d="M6 8v8a3 3 0 0 0 3 3h3"></path>
+                                        <path d="M9 5h5a4 4 0 0 1 4 4"></path>
+                                    </svg>
+                                </span>
+                                <span class="timeline-step__label">Probabilistic match</span>
+                            </button>
+                            <button type="button" class="timeline-step" data-timeline-trigger>
+                                <span class="timeline-step__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </span>
+                                <span class="timeline-step__label">Assisted review</span>
+                            </button>
+                            <button type="button" class="timeline-step" data-timeline-trigger>
+                                <span class="timeline-step__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3l7 2.5v5.5c0 5-3.1 9.6-7 11-3.9-1.4-7-6-7-11V5.5L12 3z"></path>
+                                        <path d="M9.5 12.5l2 2 3.5-3.5"></path>
+                                    </svg>
+                                </span>
+                                <span class="timeline-step__label">De-identification</span>
+                            </button>
+                            <button type="button" class="timeline-step" data-timeline-trigger>
+                                <span class="timeline-step__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 12h18"></path>
+                                        <path d="M14 6l7 6-7 6"></path>
+                                    </svg>
+                                </span>
+                                <span class="timeline-step__label">Delivery</span>
+                            </button>
                         </div>
                         <div class="timeline-panels">
                             <div class="timeline-panel" data-timeline-panel>
@@ -172,6 +232,7 @@
             </section>
 
             <section id="impact" class="project-section project-section--contrast" data-parallax-container>
+                <div class="project-section__bg-image" data-parallax-background="0.08" style="background-image: url('../images/projects/data-linkage-impact-bg.jpg');"></div>
                 <div class="project-section__background">
                     <span class="project-orb project-orb--halo project-orb--lg" data-parallax="0.24" style="top:-200px; right:-160px;"></span>
                     <span class="project-orb project-orb--emerald project-orb--sm" data-parallax="0.34" style="bottom:-150px; left:-110px;"></span>
@@ -199,6 +260,43 @@
                     <div class="project-cta-group mt-10">
                         <a href="mailto:contact@gpis.org" class="project-cta">Collaborate on linkage</a>
                         <a href="../index.html#contact" class="project-cta secondary">Discuss data governance</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section project-section--accent" data-parallax-container>
+                <div class="project-section__bg-image" data-parallax-background="0.09" style="background-image: url('../images/projects/data-linkage-team-bg.jpg');"></div>
+                <div class="project-section__background">
+                    <span class="project-orb project-orb--sky project-orb--sm" data-parallax="0.22" style="top:-100px; right:-80px;"></span>
+                </div>
+                <div class="project-section__inner">
+                    <div class="project-section-header">
+                        <span class="project-badge">Project team</span>
+                        <h2 class="project-section-title">Key Researchers on This Project</h2>
+                        <p class="project-section-lead">Security, analytics, and policy translation come together through this multidisciplinary team.</p>
+                    </div>
+                    <div class="project-key-team">
+                        <a href="../researchers/christian-loret-de-mola-zanatti.html" class="project-key-team__member">
+                            <img src="../images/christian-loret-de-mola-zanatti.png" alt="Headshot of Christian Loret de Mola Zanatti" class="project-key-team__avatar">
+                            <div class="project-key-team__info">
+                                <span class="project-key-team__name">Christian Loret de Mola Zanatti</span>
+                                <span class="project-key-team__role">Cohort principal investigator</span>
+                            </div>
+                        </a>
+                        <a href="../researchers/cauane-blumenberg-silva.html" class="project-key-team__member">
+                            <img src="../images/cauane.png" alt="Headshot of Cauane Blumenberg Silva" class="project-key-team__avatar">
+                            <div class="project-key-team__info">
+                                <span class="project-key-team__name">Cauane Blumenberg Silva</span>
+                                <span class="project-key-team__role">Data linkage architect</span>
+                            </div>
+                        </a>
+                        <a href="../researchers/rafaela-costa-martins.html" class="project-key-team__member">
+                            <img src="../images/rafaela_martins.png" alt="Headshot of Rafaela Costa Martins" class="project-key-team__avatar">
+                            <div class="project-key-team__info">
+                                <span class="project-key-team__name">Rafaela Costa Martins</span>
+                                <span class="project-key-team__role">Stakeholder engagement</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>

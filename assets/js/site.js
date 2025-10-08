@@ -69,6 +69,24 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateParallax);
   }
 
+  const parallaxBackgrounds = document.querySelectorAll('[data-parallax-background]');
+  if (parallaxBackgrounds.length > 0) {
+    const updateBackgroundParallax = () => {
+      parallaxBackgrounds.forEach((background) => {
+        const speed = parseFloat(background.dataset.parallaxBackground) || 0.12;
+        const container = background.closest('[data-parallax-container]') || background.parentElement;
+        if (!container) return;
+        const rect = container.getBoundingClientRect();
+        const offset = rect.top * speed;
+        background.style.transform = `translate3d(0, ${offset}px, 0) scale(1.02)`;
+      });
+    };
+
+    updateBackgroundParallax();
+    window.addEventListener('scroll', updateBackgroundParallax, { passive: true });
+    window.addEventListener('resize', updateBackgroundParallax);
+  }
+
   // Intersection observer for animated sections
   const animatedSections = document.querySelectorAll('.animated-section');
   if (animatedSections.length > 0) {
