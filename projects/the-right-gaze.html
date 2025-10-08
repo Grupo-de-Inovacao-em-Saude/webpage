@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Right Gaze | GPIS Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-dark)]">
+    <div id="scroll-progress-bar">
+        <div id="scroll-progress-indicator"></div>
+    </div>
+
+    <header id="main-header" class="fixed top-0 left-0 w-full bg-[var(--header-bg)]/60 backdrop-blur-md z-40">
+        <div class="container mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="../index.html" class="font-poppins font-semibold text-xl text-[var(--text-dark)] tracking-wide hover:text-[var(--primary-color)] transition-colors">GPIS Projects</a>
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-[var(--text-muted)]">
+                <a href="#innovation" class="nav-link-effect">Innovation</a>
+                <a href="#methodology" class="nav-link-effect">Methodology</a>
+                <a href="#impact" class="nav-link-effect">Impact</a>
+                <a href="#support" class="nav-link-effect">Support</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-[var(--text-dark)]">☰</button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-[var(--header-bg)]/95 border-t border-slate-200">
+            <a href="#innovation" class="block text-center py-3 px-6 text-[var(--text-dark)] hover:bg-slate-200/50">Innovation</a>
+            <a href="#methodology" class="block text-center py-3 px-6 text-[var(--text-dark)] hover:bg-slate-200/50">Methodology</a>
+            <a href="#impact" class="block text-center py-3 px-6 text-[var(--text-dark)] hover:bg-slate-200/50">Impact</a>
+            <a href="#support" class="block text-center py-4 px-6 text-[var(--text-dark)] bg-slate-200/50 hover:bg-slate-200">Support</a>
+        </div>
+    </header>
+
+    <main class="pt-36 pb-24">
+        <div class="container mx-auto px-6 space-y-16 md:space-y-24">
+            <section class="project-hero" data-parallax-container>
+                <div class="project-hero__background">
+                    <span class="project-orb project-orb--teal project-orb--xl" data-parallax="0.16" style="top:-160px; right:-160px;"></span>
+                    <span class="project-orb project-orb--sky project-orb--lg" data-parallax="0.24" style="bottom:-200px; left:-150px;"></span>
+                    <span class="project-orb project-orb--halo project-orb--sm" data-parallax="0.22" style="top:40%; left:60%;"></span>
+                </div>
+                <div class="project-hero__layout">
+                    <div class="project-hero__content">
+                        <span class="project-hero__eyebrow">Immersive family science</span>
+                        <h1 class="project-hero__title font-poppins">The Right Gaze: Unveiling Emotions in Mother-Child Interactions with Innovative Technology</h1>
+                        <p class="project-hero__lead">Headcams and AI analytics bring us closer to the emotional choreography of parenting, capturing authentic moments that shape development and wellbeing.</p>
+                        <div class="project-cta-group">
+                            <a href="#support" class="project-cta">Partner with the project</a>
+                            <a href="../index.html#projects" class="project-cta secondary">Back to Projects</a>
+                        </div>
+                        <div class="project-stat-grid">
+                            <div class="project-stat-card">
+                                <strong>3 synchronized perspectives</strong>
+                                <span>Mother, child, and ambient cameras unite to tell the full story.</span>
+                            </div>
+                            <div class="project-stat-card">
+                                <strong>AI emotion decoding</strong>
+                                <span>FaceReader and ML models tag joy, stress, and synchrony in milliseconds.</span>
+                            </div>
+                            <div class="project-stat-card">
+                                <strong>Participant-controlled privacy</strong>
+                                <span>Families approve every clip before it enters our encrypted archive.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-hero__visual">
+                        <span class="project-hero__halo"></span>
+                        <div class="project-hero__visual-frame flex items-center justify-center">
+                            <div class="video-placeholder__content text-center">
+                                <div class="video-placeholder__button">▶</div>
+                                <h3 class="text-lg font-semibold text-[var(--text-dark)] font-poppins">Sneak peek reel</h3>
+                                <p class="mt-2 text-[var(--text-muted)]">A teaser video will showcase how wearable cameras capture daily life.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="innovation" class="project-section project-section--accent" data-parallax-container>
+                <div class="project-section__background">
+                    <span class="project-orb project-orb--teal project-orb--lg" data-parallax="0.2" style="top:-140px; right:-120px;"></span>
+                    <span class="project-orb project-orb--emerald project-orb--md" data-parallax="0.28" style="bottom:-140px; left:-110px;"></span>
+                </div>
+                <div class="project-section__inner">
+                    <div class="project-section-header">
+                        <span class="project-badge">Why it&apos;s different</span>
+                        <h2 class="project-section-title font-poppins">Seeing family life through their own eyes</h2>
+                        <p class="project-section-lead">Traditional observation alters behaviour. The Right Gaze keeps interactions natural, combining human warmth with high-fidelity data.</p>
+                    </div>
+                    <div class="grid gap-10 lg:grid-cols-2">
+                        <div class="space-y-6 text-[var(--text-muted)] leading-relaxed">
+                            <p><strong class="text-[var(--text-dark)]">Real perspective:</strong> Head-mounted cameras on both mother and child reveal what they see, without external observers.</p>
+                            <p><strong class="text-[var(--text-dark)]">Emotion decoding:</strong> AI tools like FaceReader analyse micro-expressions, vocalisations, and synchrony to capture joy, stress, and connection in milliseconds.</p>
+                            <p><strong class="text-[var(--text-dark)]">Objective insights:</strong> Behavioural patterns become measurable data, helping us identify supportive dynamics and early warning signs.</p>
+                        </div>
+                        <div class="info-card p-6 space-y-3">
+                            <h3 class="text-xl font-semibold text-[var(--text-dark)] font-poppins">Innovation spotlight</h3>
+                            <p class="text-[var(--text-muted)] leading-relaxed">Families record their own daily routines—mealtimes, play, bedtime—while an ambient camera frames the whole environment. AI stitches perspectives together for unparalleled clarity.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="methodology" class="project-section project-section--split" data-parallax-container>
+                <div class="project-section__background">
+                    <span class="project-orb project-orb--halo project-orb--lg" data-parallax="0.22" style="top:-180px; left:-140px;"></span>
+                    <span class="project-orb project-orb--sky project-orb--sm" data-parallax="0.3" style="bottom:-120px; right:-110px;"></span>
+                </div>
+                <div class="project-section__inner">
+                    <div class="space-y-6">
+                        <div class="project-section-header">
+                            <span class="project-badge">Methodology</span>
+                            <h2 class="project-section-title font-poppins">Technology with empathy at its core</h2>
+                            <p class="project-section-lead">Rigorous protocols and ethical guardrails ensure every recording respects family privacy and agency.</p>
+                        </div>
+                        <div class="info-card p-6 space-y-3">
+                            <h3 class="text-xl font-semibold text-[var(--text-dark)] font-poppins">Wearable tech</h3>
+                            <p class="text-[var(--text-muted)] leading-relaxed">Lightweight headcams for mother and child capture first-person views, while a frame camera provides contextual footage.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="info-card p-6 space-y-3">
+                            <h3 class="text-xl font-semibold text-[var(--text-dark)] font-poppins">AI interpretation</h3>
+                            <p class="text-[var(--text-muted)] leading-relaxed">Machine learning models quantify facial expressions, vocal tone, and attention synchrony to reveal the rhythm of connection.</p>
+                        </div>
+                        <div class="info-card p-6 space-y-3">
+                            <h3 class="text-xl font-semibold text-[var(--text-dark)] font-poppins">Privacy first</h3>
+                            <p class="text-[var(--text-muted)] leading-relaxed">Encrypted storage, strict consent protocols, and participant control over recordings keep trust at the centre.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="impact" class="project-section project-section--contrast" data-parallax-container>
+                <div class="project-section__background">
+                    <span class="project-orb project-orb--halo project-orb--lg" data-parallax="0.24" style="top:-200px; right:-160px;"></span>
+                    <span class="project-orb project-orb--teal project-orb--sm" data-parallax="0.34" style="bottom:-150px; left:-120px;"></span>
+                </div>
+                <div class="project-section__inner">
+                    <div class="project-section-header">
+                        <span class="project-badge">Expected impact</span>
+                        <h2 class="project-section-title font-poppins">Transforming parenting support with objective evidence</h2>
+                        <p class="project-section-lead">The Right Gaze turns intimate moments into actionable insights for families, professionals, and policymakers.</p>
+                    </div>
+                    <div class="grid gap-6 lg:grid-cols-3">
+                        <div class="support-card">
+                            <h4>Understand parenting styles</h4>
+                            <p>Map how different interaction patterns influence child development and maternal mental health.</p>
+                        </div>
+                        <div class="support-card">
+                            <h4>Identify early signals</h4>
+                            <p>Spot stress markers and attachment challenges before they escalate.</p>
+                        </div>
+                        <div class="support-card">
+                            <h4>Design better interventions</h4>
+                            <p>Tailor support programs using evidence grounded in lived experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="support" class="project-section" data-parallax-container>
+                <div class="project-section__background">
+                    <span class="project-orb project-orb--emerald project-orb--md" data-parallax="0.22" style="top:-150px; left:-110px;"></span>
+                    <span class="project-orb project-orb--sky project-orb--sm" data-parallax="0.32" style="bottom:-120px; right:-100px;"></span>
+                </div>
+                <div class="project-section__inner">
+                    <div class="project-section-header">
+                        <span class="project-badge">Get involved</span>
+                        <h2 class="project-section-title font-poppins">Help shape the next frontier of family research</h2>
+                        <p class="project-section-lead">We&apos;re building a coalition of researchers, technologists, and social innovators to bring this vision to life.</p>
+                    </div>
+                    <div class="support-grid">
+                        <div class="support-card">
+                            <h4>Technology partners</h4>
+                            <p>Contribute expertise in computer vision, affective computing, or secure data infrastructure.</p>
+                        </div>
+                        <div class="support-card">
+                            <h4>Community collaborators</h4>
+                            <p>Connect us with families, educators, and mental health advocates interested in co-designing tools.</p>
+                        </div>
+                        <div class="support-card">
+                            <h4>Funding allies</h4>
+                            <p>Support equipment, analysis, and dissemination so insights travel from lab to living room.</p>
+                        </div>
+                    </div>
+                    <div class="project-cta-group mt-10">
+                        <a href="mailto:contact@gpis.org" class="project-cta">Discuss collaboration</a>
+                        <a href="../index.html#contact" class="project-cta secondary">Contact GPIS</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-directory" data-parallax-container>
+                <span class="project-orb project-orb--halo project-orb--lg" data-parallax="0.22" style="top:-160px; right:-200px;"></span>
+                <span class="project-orb project-orb--emerald project-orb--sm" data-parallax="0.3" style="bottom:-150px; left:-120px;"></span>
+                <h2 class="font-poppins">Continue exploring</h2>
+                <div class="project-directory-list">
+                    <a href="rio-grande-2019-birth-cohort.html"><span>Rio Grande 2019 Birth Cohort</span><span>→</span></a>
+                    <a href="data-linkage.html"><span>Data Linkage: Unlocking Insights</span><span>→</span></a>
+                    <a href="crisis-alert.html"><span>Crisis Alert: Mental Health in Crises</span><span>→</span></a>
+                    <a href="connected-mothers.html"><span>Connected Mothers: WhatsApp Support</span><span>→</span></a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-[var(--bg-secondary)] text-[var(--text-dark)] mt-24">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <p class="text-sm text-[var(--text-muted)]">© <span data-current-year></span> GPIS — Rio Grande, Brazil. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/site.js"></script>
+</body>
+</html>

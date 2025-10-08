@@ -7,109 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* CSS Variables/Utilities */
-        :root {
-            --primary-color: #0ea5e9; /* Sky Blue */
-            --secondary-color: #14b8a6; /* Teal */
-            --accent-color: #10b981; /* Emerald Green */
-            --text-dark: #1e293b;   /* Slate 800 for Text */
-            --text-muted: #64748b;    /* Slate 500 */
-            --bg-primary: #f8fafc;    /* Slate 50 */
-            --bg-secondary: #ffffff;   /* White */
-            --header-bg: #f1f5f9; /* Slate 100 for the new header color */
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-dark);
-        }
-        
-        .font-poppins {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .text-gradient {
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-fill-color: transparent;
-        }
-
-        /* Scroll Progress Bar */
-        #scroll-progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background-color: transparent;
-            z-index: 1000;
-        }
-
-        #scroll-progress-indicator {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-            width: 0%;
-            transition: width 0.1s linear;
-        }
-        
-        /* Slider Styles */
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-            background-size: cover;
-            background-position: center;
-        }
-        .slide.active {
-            opacity: 1;
-        }
-
-        /* Reversible Scroll-triggered Animations */
-        .animated-section > * {
-            opacity: 0;
-            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        .animated-section.slide-from-left > * {
-            transform: translateX(-100px);
-        }
-        .animated-section.slide-from-right > * {
-            transform: translateX(100px);
-        }
-        .animated-section.in-view > * {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        
-        /* Subtle Card Hover Effect */
-        .card-subtle-hover {
-            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
-        }
-        .card-subtle-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-        }
-
-        /* New Header Link Hover Effect */
-        .nav-link-effect {
-            transition: all 0.3s ease-out;
-        }
-        .nav-link-effect:hover {
-            color: var(--primary-color);
-            transform: translateY(-2px);
-            text-shadow: 0 4px 10px rgba(14, 165, 233, 0.4);
-        }
-
-    </style>
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body class="bg-[--bg-primary]">
+<body class="bg-[var(--bg-primary)]">
 
     <!-- SCROLL PROGRESS BAR -->
     <div id="scroll-progress-bar">
@@ -117,7 +17,7 @@
     </div>
 
     <!-- HEADER & NAVIGATION -->
-    <header id="main-header" class="fixed top-0 left-0 w-full bg-[--header-bg]/50 backdrop-blur-md z-50 transition-all duration-300">
+    <header id="main-header" class="fixed top-0 left-0 w-full bg-[var(--header-bg)]/50 backdrop-blur-md z-50 transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="flex items-center space-x-3">
                 <img src="images/logo.png" alt="GPIS Logo" class="h-12 md:h-16 w-auto transition-transform duration-300 hover:scale-105">
@@ -128,7 +28,7 @@
                     <a href="#members" class="nav-link-effect">Members</a>
                     <a href="#projects" class="nav-link-effect">Projects</a>
                     <a href="#news" class="nav-link-effect">News</a>
-                    <a href="#contact" class="bg-gradient-to-r from-[--primary-color] to-[--accent-color] text-white px-5 py-2.5 rounded-full hover:shadow-[0_0_20px_var(--primary-color)] transition-all duration-300 transform hover:-translate-y-0.5">Contact</a>
+                    <a href="#contact" class="bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] text-white px-5 py-2.5 rounded-full hover:shadow-[0_0_20px_var(--primary-color)] transition-all duration-300 transform hover:-translate-y-0.5">Contact</a>
                 </nav>
                 <div class="flex items-center ml-6 space-x-2">
                      <a href="index.html" class="p-1 hover:opacity-80 transition-opacity duration-300">
@@ -138,18 +38,18 @@
                         <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/32px-Flag_of_Brazil.svg.png" alt="Português" class="h-6 w-6 rounded-full object-cover">
                     </a>
                 </div>
-                <button id="mobile-menu-btn" class="md:hidden text-2xl text-[--text-dark] ml-4">
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-[var(--text-dark)] ml-4">
                     ☰
                 </button>
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-[--header-bg]/95 border-t border-slate-200">
-            <a href="#group" class="block text-center py-3 px-6 text-[--text-dark] hover:bg-slate-200/50">Group</a>
-            <a href="#members" class="block text-center py-3 px-6 text-[--text-dark] hover:bg-slate-200/50">Members</a>
-            <a href="#projects" class="block text-center py-3 px-6 text-[--text-dark] hover:bg-slate-200/50">Projects</a>
-            <a href="#news" class="block text-center py-3 px-6 text-[--text-dark] hover:bg-slate-200/50">News</a>
-            <a href="#contact" class="block text-center py-4 px-6 text-[--text-dark] bg-slate-200/50 hover:bg-slate-200">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-[var(--header-bg)]/95 border-t border-slate-200">
+            <a href="#group" class="block text-center py-3 px-6 text-[var(--text-dark)] hover:bg-slate-200/50">Group</a>
+            <a href="#members" class="block text-center py-3 px-6 text-[var(--text-dark)] hover:bg-slate-200/50">Members</a>
+            <a href="#projects" class="block text-center py-3 px-6 text-[var(--text-dark)] hover:bg-slate-200/50">Projects</a>
+            <a href="#news" class="block text-center py-3 px-6 text-[var(--text-dark)] hover:bg-slate-200/50">News</a>
+            <a href="#contact" class="block text-center py-4 px-6 text-[var(--text-dark)] bg-slate-200/50 hover:bg-slate-200">Contact</a>
         </div>
     </header>
 
@@ -203,17 +103,17 @@
 
     <!-- Main Content Wrapper -->
     <main class="relative z-10">
-        <div class="bg-[--bg-primary] container mx-auto px-6 py-20 md:py-28 space-y-20 md:space-y-28">
+        <div class="bg-[var(--bg-primary)] container mx-auto px-6 py-20 md:py-28 space-y-20 md:space-y-28">
 
             <!-- GROUP MISSION SECTION WITH PARALLAX -->
             <section id="group" class="animated-section slide-from-right relative text-center max-w-5xl mx-auto py-24 rounded-lg bg-cover bg-fixed bg-center" style="background-image: url('images/collaboration-bg.png');">
                 <div class="absolute inset-0 bg-white/80 backdrop-blur-sm rounded-lg"></div>
                 <div class="relative z-10">
                     <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gradient">Our Mission and Culture</h2>
-                    <p class="text-lg text-[--text-muted] leading-relaxed mb-4 px-4">
+                    <p class="text-lg text-[var(--text-muted)] leading-relaxed mb-4 px-4">
                         The GPIS fosters equality and trust, prioritizing quality research and social impact through innovation.
                     </p>
-                    <p class="text-lg text-[--text-muted] leading-relaxed px-4">
+                    <p class="text-lg text-[var(--text-muted)] leading-relaxed px-4">
                         We lead with AI, wearables, and data linkage for cutting-edge epidemiology.
                     </p>
                 </div>
@@ -222,17 +122,17 @@
             <!-- IMPACT SECTION -->
             <section id="impact" class="animated-section slide-from-left">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-[--bg-secondary] p-8 rounded-xl shadow-xl border-t-4 border-[--accent-color]">
+                    <div class="bg-[var(--bg-secondary)] p-8 rounded-xl shadow-xl border-t-4 border-[var(--accent-color)]">
                         <p class="text-5xl font-extrabold text-gradient">2,000+</p>
-                        <p class="mt-2 text-lg font-semibold text-[--text-muted]">Mothers & Children in Cohort</p>
+                        <p class="mt-2 text-lg font-semibold text-[var(--text-muted)]">Mothers & Children in Cohort</p>
                     </div>
-                    <div class="bg-[--bg-secondary] p-8 rounded-xl shadow-xl border-t-4 border-[--accent-color]">
+                    <div class="bg-[var(--bg-secondary)] p-8 rounded-xl shadow-xl border-t-4 border-[var(--accent-color)]">
                         <p class="text-5xl font-extrabold text-gradient">4+</p>
-                        <p class="mt-2 text-lg font-semibold text-[--text-muted]">Longitudinal Follow-ups</p>
+                        <p class="mt-2 text-lg font-semibold text-[var(--text-muted)]">Longitudinal Follow-ups</p>
                     </div>
-                    <div class="bg-[--bg-secondary] p-8 rounded-xl shadow-xl border-t-4 border-[--accent-color]">
+                    <div class="bg-[var(--bg-secondary)] p-8 rounded-xl shadow-xl border-t-4 border-[var(--accent-color)]">
                         <p class="text-5xl font-extrabold text-gradient">Global</p>
-                        <p class="mt-2 text-lg font-semibold text-[--text-muted]">Research Collaborations</p>
+                        <p class="mt-2 text-lg font-semibold text-[var(--text-muted)]">Research Collaborations</p>
                     </div>
                 </div>
             </section>
@@ -243,79 +143,107 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-5xl mx-auto">
                     <!-- Member 1: Christian Loret de Mola Zanatti -->
                     <div class="text-center group">
-                        <img src="images/christian-loret-de-mola-zanatti.png" alt="Christian Loret de Mola Zanatti" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg ring-4 ring-white group-hover:ring-[--accent-color] transition-all duration-300 transform group-hover:scale-105">
-                        <a href="https://orcid.org/0000-0002-5264-5914" target="_blank" rel="noopener noreferrer" class="hover:opacity-80">
-                            <h3 class="mt-5 text-xl font-bold text-[--text-dark]">Christian Loret de Mola Zanatti</h3>
+                        <img src="images/christian-loret-de-mola-zanatti.png" alt="Christian Loret de Mola Zanatti" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg ring-4 ring-white group-hover:ring-[var(--accent-color)] transition-all duration-300 transform group-hover:scale-105">
+                        <a href="researchers/christian-loret-de-mola-zanatti.html" class="hover:opacity-80">
+                            <h3 class="mt-5 text-xl font-bold text-[var(--text-dark)]">Christian Loret de Mola Zanatti</h3>
                         </a>
-                        <p class="text-[--text-muted]">Founder and Leader</p>
+                        <p class="text-[var(--text-muted)]">Founder and Leader</p>
                     </div>
                     <!-- Member 2: Rafaela Costa Martins -->
                     <div class="text-center group">
-                        <img src="images/rafaela_martins.png" alt="Rafaela Costa Martins" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg ring-4 ring-white group-hover:ring-[--accent-color] transition-all duration-300 transform group-hover:scale-105">
-                        <a href="https://orcid.org/0000-0003-3538-7228" target="_blank" rel="noopener noreferrer" class="hover:opacity-80">
-                            <h3 class="mt-5 text-xl font-bold text-[--text-dark]">Rafaela Costa Martins</h3>
+                        <img src="images/rafaela_martins.png" alt="Rafaela Costa Martins" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg ring-4 ring-white group-hover:ring-[var(--accent-color)] transition-all duration-300 transform group-hover:scale-105">
+                        <a href="researchers/rafaela-costa-martins.html" class="hover:opacity-80">
+                            <h3 class="mt-5 text-xl font-bold text-[var(--text-dark)]">Rafaela Costa Martins</h3>
                         </a>
-                        <p class="text-[--text-muted]">Researcher</p>
+                        <p class="text-[var(--text-muted)]">Researcher</p>
                     </div>
                     <!-- Member 3: Francine dos Santos Costa -->
                     <div class="text-center group">
-                        <img src="images/Francine_costa.png" alt="Francine dos Santos Costa" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg ring-4 ring-white group-hover:ring-[--accent-color] transition-all duration-300 transform group-hover:scale-105">
-                        <a href="https://orcid.org/0000-0001-9558-937X" target="_blank" rel="noopener noreferrer" class="hover:opacity-80">
-                            <h3 class="mt-5 text-xl font-bold text-[--text-dark]">Francine dos Santos Costa</h3>
+                        <img src="images/Francine_costa.png" alt="Francine dos Santos Costa" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg ring-4 ring-white group-hover:ring-[var(--accent-color)] transition-all duration-300 transform group-hover:scale-105">
+                        <a href="researchers/francine-dos-santos-costa.html" class="hover:opacity-80">
+                            <h3 class="mt-5 text-xl font-bold text-[var(--text-dark)]">Francine dos Santos Costa</h3>
                         </a>
-                        <p class="text-[--text-muted]">Researcher</p>
+                        <p class="text-[var(--text-muted)]">Researcher</p>
                     </div>
                     <!-- Member 4: Cauane Blumenberg -->
                     <div class="text-center group">
-                        <img src="images/cauane.png" alt="Cauane Blumenberg" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg ring-4 ring-white group-hover:ring-[--accent-color] transition-all duration-300 transform group-hover:scale-105">
-                         <a href="https://orcid.org/0000-0002-4580-3849" target="_blank" rel="noopener noreferrer" class="hover:opacity-80">
-                            <h3 class="mt-5 text-xl font-bold text-[--text-dark]">Cauane Blumenberg</h3>
+                        <img src="images/cauane.png" alt="Cauane Blumenberg" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg ring-4 ring-white group-hover:ring-[var(--accent-color)] transition-all duration-300 transform group-hover:scale-105">
+                         <a href="researchers/cauane-blumenberg-silva.html" class="hover:opacity-80">
+                            <h3 class="mt-5 text-xl font-bold text-[var(--text-dark)]">Cauane Blumenberg</h3>
                         </a>
-                        <p class="text-[--text-muted]">Researcher</p>
+                        <p class="text-[var(--text-muted)]">Researcher</p>
                     </div>
                     <!-- Member 5: Thais Martins Silva -->
                     <div class="text-center group">
-                        <img src="images/thais_martins.png" alt="Thais Martins Silva" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg ring-4 ring-white group-hover:ring-[--accent-color] transition-all duration-300 transform group-hover:scale-105">
-                        <a href="https://orcid.org/0000-0001-5049-2435" target="_blank" rel="noopener noreferrer" class="hover:opacity-80">
-                            <h3 class="mt-5 text-xl font-bold text-[--text-dark]">Thais Martins Silva</h3>
+                        <img src="images/thais_martins.png" alt="Thais Martins Silva" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg ring-4 ring-white group-hover:ring-[var(--accent-color)] transition-all duration-300 transform group-hover:scale-105">
+                        <a href="researchers/thais-martins-da-silva.html" class="hover:opacity-80">
+                            <h3 class="mt-5 text-xl font-bold text-[var(--text-dark)]">Thais Martins Silva</h3>
                         </a>
-                        <p class="text-[--text-muted]">Researcher</p>
+                        <p class="text-[var(--text-muted)]">Researcher</p>
                     </div>
                     <!-- Member 6: Romina Buffarini -->
                     <div class="text-center group">
-                        <img src="images/romina_buffarini.png" alt="Romina Buffarini" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg ring-4 ring-white group-hover:ring-[--accent-color] transition-all duration-300 transform group-hover:scale-105">
-                        <a href="https://orcid.org/0000-0002-6905-8767" target="_blank" rel="noopener noreferrer" class="hover:opacity-80">
-                            <h3 class="mt-5 text-xl font-bold text-[--text-dark]">Romina Buffarini</h3>
+                        <img src="images/romina_buffarini.png" alt="Romina Buffarini" class="w-40 h-40 mx-auto rounded-full object-cover shadow-lg ring-4 ring-white group-hover:ring-[var(--accent-color)] transition-all duration-300 transform group-hover:scale-105">
+                        <a href="researchers/romina-buffarini.html" class="hover:opacity-80">
+                            <h3 class="mt-5 text-xl font-bold text-[var(--text-dark)]">Romina Buffarini</h3>
                         </a>
-                        <p class="text-[--text-muted]">Researcher</p>
+                        <p class="text-[var(--text-muted)]">Researcher</p>
                     </div>
                 </div>
             </section>
 
             <!-- PROJECTS SECTION -->
-            <section id="projects" class="animated-section slide-from-left">
+            <section id="projects" class="relative animated-section slide-from-left" data-parallax-container>
+                <div class="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-br from-[var(--header-bg)]/80 via-transparent to-[var(--accent-color)]/10"></div>
+                <span class="parallax-shape parallax-shape--lg parallax-shape--blue" data-parallax="0.18" style="top:-80px; left:-120px;"></span>
+                <span class="parallax-shape parallax-shape--md parallax-shape--green" data-parallax="0.24" style="bottom:-120px; right:-100px;"></span>
                 <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gradient font-poppins">Our Research Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-[--bg-secondary] p-8 rounded-lg shadow-md card-subtle-hover border-l-4 border-[--accent-color]">
-                        <h3 class="text-2xl font-bold text-[--primary-color] mb-3 font-poppins">The Journey of a Generation: The 2019 Rio Grande Birth Cohort</h3>
-                        <p class="text-[--text-muted] leading-relaxed font-poppins">Our flagship longitudinal study follows over 2,300 children and their mothers from birth. By monitoring growth, development, and family well-being over time, we aim to understand the key factors that shape a generation's health and quality of life.</p>
-                    </div>
-                    <div class="bg-[--bg-secondary] p-8 rounded-lg shadow-md card-subtle-hover border-l-4 border-[--accent-color]">
-                        <h3 class="text-2xl font-bold text-[--primary-color] mb-3 font-poppins">The Right Look: AI Insights into Parent-Child Interaction</h3>
-                        <p class="text-[--text-muted] leading-relaxed font-poppins">This innovative study uses wearable cameras and AI-powered facial analysis to capture real-world mother-child interactions. This provides unprecedented, objective insights into early childhood development, parental practices, and emotional bonding.</p>
-                    </div>
-                    <div class="bg-[--bg-secondary] p-8 rounded-lg shadow-md card-subtle-hover border-l-4 border-[--accent-color]">
-                        <h3 class="text-2xl font-bold text-[--primary-color] mb-3 font-poppins">Linking the Future: A Secure Data Initiative</h3>
-                        <p class="text-[--text-muted] leading-relaxed font-poppins">We ethically and securely link our cohort data with public health records to enrich our datasets. This process validates self-reported information and provides objective measures of health outcomes, leading to more accurate and powerful research findings.</p>
-                    </div>
-                    <div class="bg-[--bg-secondary] p-8 rounded-lg shadow-md card-subtle-hover border-l-4 border-[--accent-color]">
-                        <h3 class="text-2xl font-bold text-[--primary-color] mb-3 font-poppins">Resilience in the Face of Crisis: The 2024 Flood Impact Study</h3>
-                        <p class="text-[--text-muted] leading-relaxed font-poppins">A timely follow-up study assessing the mental health and social impacts of the severe 2024 floods on our cohort families. This research seeks to understand family resilience and inform future public health responses to environmental disasters.</p>
-                    </div>
-                     <div class="bg-[--bg-secondary] p-8 rounded-lg shadow-md card-subtle-hover border-l-4 border-[--accent-color] md:col-span-2 max-w-3xl mx-auto w-full">
-                        <h3 class="text-2xl font-bold text-[--primary-color] mb-3 font-poppins">Connected Mothers, Healthy Families: The WhatsApp Support Project</h3>
-                        <p class="text-[--text-muted] leading-relaxed font-poppins">A clinical trial evaluating the effectiveness of a mobile health intervention using WhatsApp groups. The project provides mothers with information, social support, and encouragement on topics like child nutrition, sleep, and maternal mental health to measure its impact on family well-being.</p>
-                    </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <a href="projects/rio-grande-2019-birth-cohort.html" class="project-card project-card--sky">
+                        <span class="project-card__overlay"></span>
+                        <div class="project-card__content">
+                            <span class="project-card__badge">Flagship cohort</span>
+                            <h3 class="project-card__title">The Journey of a Generation: The 2019 Rio Grande Birth Cohort</h3>
+                            <p class="project-card__copy">Our longitudinal partnership with more than 2,300 families reveals how early life experiences influence health, learning, and opportunity in Rio Grande.</p>
+                            <span class="project-card__cta">Explore the cohort<span>→</span></span>
+                        </div>
+                    </a>
+                    <a href="projects/the-right-gaze.html" class="project-card project-card--teal">
+                        <span class="project-card__overlay"></span>
+                        <div class="project-card__content">
+                            <span class="project-card__badge">Immersive science</span>
+                            <h3 class="project-card__title">The Right Look: AI Insights into Parent-Child Interaction</h3>
+                            <p class="project-card__copy">Wearable cameras and AI-powered affect analysis decode everyday interactions, transforming how we understand emotional bonds.</p>
+                            <span class="project-card__cta">Experience the project<span>→</span></span>
+                        </div>
+                    </a>
+                    <a href="projects/data-linkage.html" class="project-card project-card--emerald">
+                        <span class="project-card__overlay"></span>
+                        <div class="project-card__content">
+                            <span class="project-card__badge">Data fusion</span>
+                            <h3 class="project-card__title">Linking the Future: A Secure Data Initiative</h3>
+                            <p class="project-card__copy">Ethical data linkage validates self-reports, tracks health service access, and powers policy-grade insights for public health.</p>
+                            <span class="project-card__cta">See how we link data<span>→</span></span>
+                        </div>
+                    </a>
+                    <a href="projects/crisis-alert.html" class="project-card project-card--midnight">
+                        <span class="project-card__overlay"></span>
+                        <div class="project-card__content">
+                            <span class="project-card__badge">Crisis intelligence</span>
+                            <h3 class="project-card__title">Resilience in the Face of Crisis: The 2024 Flood Impact Study</h3>
+                            <p class="project-card__copy">Rapid-response follow-ups measure how COVID-19 and historic floods reshape mental health, resilience, and public policy needs.</p>
+                            <span class="project-card__cta">Dive into Crisis Alert<span>→</span></span>
+                        </div>
+                    </a>
+                    <a href="projects/connected-mothers.html" class="project-card project-card--emerald lg:col-span-2">
+                        <span class="project-card__overlay"></span>
+                        <div class="project-card__content">
+                            <span class="project-card__badge">Digital intervention</span>
+                            <h3 class="project-card__title">Connected Mothers, Healthy Families: The WhatsApp Support Project</h3>
+                            <p class="project-card__copy">A randomised WhatsApp intervention delivers mental health support, nutrition tips, and peer connection—proving that low-cost tech can transform care.</p>
+                            <span class="project-card__cta">Visit Mothers Connected<span>→</span></span>
+                        </div>
+                    </a>
                 </div>
             </section>
 
@@ -323,25 +251,25 @@
             <section id="news" class="animated-section slide-from-right">
                 <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-gradient font-poppins">News & Updates</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-[--bg-secondary] rounded-lg shadow-md overflow-hidden flex flex-col card-subtle-hover border-b-4 border-[--accent-color]">
+                    <div class="bg-[var(--bg-secondary)] rounded-lg shadow-md overflow-hidden flex flex-col card-subtle-hover border-b-4 border-[var(--accent-color)]">
                         <img src="images/cohort-expansion.png" alt="Flood Impact" class="w-full h-48 object-cover">
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold text-[--text-dark] font-poppins">New Study Launched on 2024 Flood Impact</h3>
-                            <p class="mt-2 text-[--text-muted] flex-grow font-poppins">In response to the devastating 2024 floods, we have launched a new online follow-up study to assess the long-term mental health and social impacts on our cohort families.</p>
+                            <h3 class="text-xl font-bold text-[var(--text-dark)] font-poppins">New Study Launched on 2024 Flood Impact</h3>
+                            <p class="mt-2 text-[var(--text-muted)] flex-grow font-poppins">In response to the devastating 2024 floods, we have launched a new online follow-up study to assess the long-term mental health and social impacts on our cohort families.</p>
                         </div>
                     </div>
-                    <div class="bg-[--bg-secondary] rounded-lg shadow-md overflow-hidden flex flex-col card-subtle-hover border-b-4 border-[--accent-color]">
+                    <div class="bg-[var(--bg-secondary)] rounded-lg shadow-md overflow-hidden flex flex-col card-subtle-hover border-b-4 border-[var(--accent-color)]">
                         <img src="images/global-collab.png" alt="Global Collaboration" class="w-full h-48 object-cover">
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold text-[--text-dark] font-poppins">Expanding Our Global Research Network</h3>
-                            <p class="mt-2 text-[--text-muted] flex-grow font-poppins">Our commitment to world-class research is strengthened by our international collaborations with leading institutions in the UK, USA, Peru, and across Brazil.</p>
+                            <h3 class="text-xl font-bold text-[var(--text-dark)] font-poppins">Expanding Our Global Research Network</h3>
+                            <p class="mt-2 text-[var(--text-muted)] flex-grow font-poppins">Our commitment to world-class research is strengthened by our international collaborations with leading institutions in the UK, USA, Peru, and across Brazil.</p>
                         </div>
                     </div>
-                    <div class="bg-[--bg-secondary] rounded-lg shadow-md overflow-hidden flex flex-col card-subtle-hover border-b-4 border-[--accent-color]">
+                    <div class="bg-[var(--bg-secondary)] rounded-lg shadow-md overflow-hidden flex flex-col card-subtle-hover border-b-4 border-[var(--accent-color)]">
                         <img src="images/ai-breakthrough.png" alt="AI Model" class="w-full h-48 object-cover">
                         <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-xl font-bold text-[--text-dark] font-poppins">Targeting Perinatal Mental Health with Predictive AI</h3>
-                            <p class="mt-2 text-[--text-muted] flex-grow font-poppins">We have applied for a major grant from the Wellcome Trust to develop a new predictive model for perinatal depression and anxiety, aiming to identify at-risk mothers earlier.</p>
+                            <h3 class="text-xl font-bold text-[var(--text-dark)] font-poppins">Targeting Perinatal Mental Health with Predictive AI</h3>
+                            <p class="mt-2 text-[var(--text-muted)] flex-grow font-poppins">We have applied for a major grant from the Wellcome Trust to develop a new predictive model for perinatal depression and anxiety, aiming to identify at-risk mothers earlier.</p>
                         </div>
                     </div>
                 </div>
@@ -350,123 +278,28 @@
     </main>
     
     <!-- FOOTER -->
-    <footer id="contact" class="bg-[--bg-secondary] text-[--text-dark]">
+    <footer id="contact" class="bg-[var(--bg-secondary)] text-[var(--text-dark)]">
         <div class="container mx-auto px-6 py-12 text-center">
             <h2 class="text-3xl font-bold mb-4 text-gradient">Get In Touch</h2>
             <p class="text-slate-500 mb-8 max-w-xl mx-auto">
                 We welcome inquiries about our research, potential collaborations, and data access.
             </p>
             <div class="flex justify-center items-center flex-wrap gap-x-6 gap-y-4 text-slate-600 mb-8">
-                <a href="mailto:contact@gpis.org" class="hover:text-[--primary-color] transition-colors">Email</a>
+                <a href="mailto:contact@gpis.org" class="hover:text-[var(--primary-color)] transition-colors">Email</a>
                 <span class="opacity-50 hidden sm:inline">|</span>
-                <a href="https://www.instagram.com/coorterg2019/" target="_blank" rel="noopener noreferrer" class="hover:text-[--primary-color] transition-colors">Instagram</a>
+                <a href="https://www.instagram.com/coorterg2019/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary-color)] transition-colors">Instagram</a>
                 <span class="opacity-50 hidden sm:inline">|</span>
-                <a href="https://wa.me/5553997133420" target="_blank" rel="noopener noreferrer" class="hover:text-[--primary-color] transition-colors">WhatsApp</a>
+                <a href="https://wa.me/5553997133420" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary-color)] transition-colors">WhatsApp</a>
                 <span class="opacity-50 hidden sm:inline">|</span>
-                <a href="https://www.facebook.com/coorterg2019/" target="_blank" rel="noopener noreferrer" class="hover:text-[--primary-color] transition-colors">Facebook</a>
+                <a href="https://www.facebook.com/coorterg2019/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary-color)] transition-colors">Facebook</a>
                 <span class="opacity-50 hidden sm:inline">|</span>
-                <a href="https://www.ncbi.nlm.nih.gov/sites/myncbi/christian.loret%20de%20mola.1/collections/65988568/public/" target="_blank" rel="noopener noreferrer" class="hover:text-[--primary-color] transition-colors">Publications</a>
+                <a href="https://www.ncbi.nlm.nih.gov/sites/myncbi/christian.loret%20de%20mola.1/collections/65988568/public/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary-color)] transition-colors">Publications</a>
             </div>
-            <p class="text-sm text-slate-400">&copy; 2025 GPIS - Health Innovation Research Group. All Rights Reserved.</p>
+            <p class="text-sm text-slate-400">&copy; <span data-current-year></span> GPIS - Health Innovation Research Group. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- JAVASCRIPT LOGIC -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const header = document.getElementById('main-header');
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const progressBar = document.getElementById('scroll-progress-indicator');
-            const animatedSections = document.querySelectorAll('.animated-section');
-
-            // 1. Sticky Header Shadow on Scroll
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 20) {
-                    header.classList.add('shadow-lg');
-                } else {
-                    header.classList.remove('shadow-lg');
-                }
-            });
-
-            // 2. Mobile Menu Toggle
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-            mobileMenu.addEventListener('click', (e) => {
-                if (e.target.tagName === 'A') {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-
-            // 3. Scroll Progress Bar
-            function updateProgressBar() {
-                const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-                if (scrollHeight - clientHeight > 0) {
-                    const scrollPercent = (scrollTop / (scrollHeight - clientHeight)) * 100;
-                    progressBar.style.width = `${scrollPercent}%`;
-                }
-            }
-            window.addEventListener('scroll', updateProgressBar);
-            
-            // 4. Reversible Scroll Animations
-            const sectionObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('in-view');
-                    } else {
-                        entry.target.classList.remove('in-view');
-                    }
-                });
-            }, {
-                threshold: 0.2 // Trigger when 20% of the section is visible
-            });
-
-            animatedSections.forEach(section => {
-                sectionObserver.observe(section);
-            });
-
-            // 5. Hero Slider Logic
-            const slides = document.querySelectorAll('#home .slide');
-            const dotsContainer = document.querySelector('.slider-dots');
-            let currentSlide = 0;
-            let slideInterval = setInterval(nextSlide, 7000);
-
-            slides.forEach((_, i) => {
-                const dot = document.createElement('button');
-                dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-white/40', 'transition-all', 'duration-300', 'backdrop-blur-sm');
-                dot.addEventListener('click', () => {
-                    goToSlide(i);
-                });
-                dotsContainer.appendChild(dot);
-            });
-            const dots = dotsContainer.querySelectorAll('button');
-
-            function goToSlide(n) {
-                slides[currentSlide].classList.remove('active');
-                dots[currentSlide].classList.remove('bg-white');
-                dots[currentSlide].classList.add('bg-white/40');
-                
-                currentSlide = (n + slides.length) % slides.length;
-                
-                slides[currentSlide].classList.add('active');
-                dots[currentSlide].classList.add('bg-white');
-                dots[currentSlide].classList.remove('bg-white/40');
-                
-                clearInterval(slideInterval);
-                slideInterval = setInterval(nextSlide, 7000);
-            }
-
-            function nextSlide() {
-                goToSlide(currentSlide + 1);
-            }
-
-            if (dots.length > 0) {
-                dots[0].classList.add('bg-white');
-                dots[0].classList.remove('bg-white/40');
-            }
-        });
-    </script>
+    <script src="assets/js/site.js" defer></script>
 </body>
 </html>
 
