@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover how the GPIS Mothers Connected project tests WhatsApp-based support to improve maternal mental health, child nutrition, and caregiving confidence.">
     <title>Connected Mothers | GPIS Projects</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Work+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/site.css">
 </head>
 <body class="bg-[var(--bg-primary)] text-[var(--text-dark)]">
@@ -16,7 +16,7 @@
 
     <header id="main-header" class="fixed top-0 left-0 w-full bg-[var(--header-bg)]/60 backdrop-blur-md z-40">
         <div class="container mx-auto px-6 py-5 flex items-center justify-between">
-            <a href="../index.html" class="font-heading font-semibold text-xl text-[var(--text-dark)] tracking-wide hover:text-[var(--primary-color)] transition-colors">GPIS Projects</a>
+            <a href="../index.html" class="font-poppins font-semibold text-xl text-[var(--text-dark)] tracking-wide hover:text-[var(--primary-color)] transition-colors">GPIS Projects</a>
             <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-[var(--text-muted)]">
                 <a href="#overview" class="nav-link-effect">Overview</a>
                 <a href="#methodology" class="nav-link-effect">Methodology</a>
@@ -33,278 +33,144 @@
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <div class="breadcrumb__container">
-            <ol class="breadcrumb__list">
-                <li><a href="../index.html">Home</a></li>
-                <li class="breadcrumb__separator" aria-hidden="true">›</li>
-                <li><a href="../index.html#projects">Projects</a></li>
-                <li class="breadcrumb__separator" aria-hidden="true">›</li>
-                <li class="breadcrumb__current" aria-current="page">Mothers Connected</li>
-            </ol>
-        </div>
-    </nav>
-
     <main class="pt-36 pb-24">
         <div class="container mx-auto px-6 space-y-16 md:space-y-24">
-            <section class="project-hero animated-section fade-up" data-parallax-container>
-                <div class="project-hero__background">
-                    <span class="project-orb project-orb--sky project-orb--xl" data-parallax="0.16" style="top:-160px; right:-140px;"></span>
-                    <span class="project-orb project-orb--emerald project-orb--lg" data-parallax="0.24" style="bottom:-220px; left:-160px;"></span>
-                    <span class="project-orb project-orb--halo project-orb--sm" data-parallax="0.22" style="top:38%; left:60%;"></span>
+            <section class="project-hero" data-parallax-container>
+                <div class="profile-hero__background">
+                    <span class="parallax-shape parallax-shape--xl parallax-shape--blue" data-parallax="0.18" style="top:-140px; right:-140px;"></span>
+                    <span class="parallax-shape parallax-shape--lg parallax-shape--green" data-parallax="0.24" style="bottom:-150px; left:-150px;"></span>
+                    <span class="parallax-shape parallax-shape--sm parallax-shape--teal" data-parallax="0.2" style="top:48%; left:62%;"></span>
                 </div>
-                <div class="project-hero__layout">
-                    <div class="project-hero__content">
+                <div class="project-hero__layout relative z-10">
+                    <div>
                         <span class="project-hero__eyebrow">Digital health innovation</span>
-                        <h1 class="project-hero__title">Mothers Connected: Low-Cost Digital Support for Maternal and Child Health</h1>
+                        <h1 class="project-hero__title font-poppins">Mothers Connected: Low-Cost Digital Support for Maternal and Child Health</h1>
                         <p class="project-hero__lead">WhatsApp becomes a lifeline for evidence-based advice, peer connection, and self-efficacy. Our randomised study measures how digital support transforms family wellbeing.</p>
                         <div class="project-cta-group">
                             <a href="#support" class="project-cta">Partner with the trial</a>
                             <a href="../index.html#projects" class="project-cta secondary">Back to Projects</a>
                         </div>
-                        <div class="project-stat-grid">
-                            <div class="project-stat-card">
-                                <strong>8-week intervention</strong>
-                                <span>Structured content and moderated groups deliver sustained guidance over two months.</span>
-                            </div>
-                            <div class="project-stat-card">
-                                <strong>3 study arms</strong>
-                                <span>Information, peer support, and control groups isolate what drives change.</span>
-                            </div>
-                            <div class="project-stat-card">
-                                <strong>Validated measures</strong>
-                                <span>EPDS, BISQ, and self-efficacy scales track mental health, routines, and confidence.</span>
-                            </div>
-                        </div>
                     </div>
-                    <div class="project-hero__visual">
-                        <span class="project-hero__halo"></span>
-                        <div class="project-hero__visual-frame">
-                            <a href="../images/connected-mothers-hero.png" class="project-hero__visual-link">View Mothers Connected hero placeholder</a>
+                    <div class="project-hero__media">
+                        <img src="../images/ai-breakthrough.png" alt="Digital health abstract" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <section id="overview" class="project-section">
+                <div class="project-section-header">
+                    <span class="project-badge">The vision</span>
+                    <h2 class="project-section-title font-poppins">Accessible support that meets mothers where they are</h2>
+                    <p class="project-section-lead">In low-resource settings, specialised care is often out of reach. Connected Mothers turns everyday messaging into a personalised support network.</p>
+                </div>
+                <div class="grid gap-8 lg:grid-cols-2">
+                    <div class="info-card p-6 space-y-3">
+                        <h3 class="text-xl font-semibold text-[var(--text-dark)] font-poppins">Structured messaging</h3>
+                        <p class="text-[var(--text-muted)] leading-relaxed">Evidence-based content covers mental health, nutrition, sleep hygiene, and practical strategies for weekly goal setting.</p>
+                    </div>
+                    <div class="info-card p-6 space-y-3">
+                        <h3 class="text-xl font-semibold text-[var(--text-dark)] font-poppins">Community connection</h3>
+                        <p class="text-[var(--text-muted)] leading-relaxed">Peer groups share experiences and encouragement, moderated by trained health professionals to maintain safety and relevance.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="methodology" class="project-section" data-timeline>
+                <div class="project-section-header">
+                    <span class="project-badge">Methodology</span>
+                    <h2 class="project-section-title font-poppins">A randomised design with real-world reach</h2>
+                    <p class="project-section-lead">We blend clinical rigour with digital accessibility to understand what truly works for mothers and babies.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-track">
+                        <button type="button" class="timeline-step" data-timeline-trigger>Recruitment</button>
+                        <button type="button" class="timeline-step" data-timeline-trigger>Group assignment</button>
+                        <button type="button" class="timeline-step" data-timeline-trigger>8-week intervention</button>
+                        <button type="button" class="timeline-step" data-timeline-trigger>Evaluation</button>
+                        <button type="button" class="timeline-step" data-timeline-trigger>Scale-up</button>
+                    </div>
+                    <div class="timeline-panels">
+                        <div class="timeline-panel" data-timeline-panel>
+                            <p>Participants join through the cohort network and community partners, ensuring inclusion of diverse maternal experiences.</p>
+                        </div>
+                        <div class="timeline-panel" data-timeline-panel>
+                            <p>Mothers are randomised into informative messaging, peer-support, or control groups to isolate the impact of each component.</p>
+                        </div>
+                        <div class="timeline-panel" data-timeline-panel>
+                            <p>Moderators guide weekly discussions, share multimedia resources, and encourage reflection through WhatsApp.</p>
+                        </div>
+                        <div class="timeline-panel" data-timeline-panel>
+                            <p>Validated instruments like EPDS, BISQ, and self-efficacy scales capture changes in mental health, child outcomes, and confidence.</p>
+                        </div>
+                        <div class="timeline-panel" data-timeline-panel>
+                            <p>Successful strategies are prepared for rollout with public health partners, adapting content to new communities.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="overview" class="project-section project-section--accent animated-section fade-up" data-parallax-container>
-                <div class="project-section__bg-image" data-parallax-background="0.1" style="background-image: url('../images/projects/connected-mothers-overview-bg.jpg');"></div>
-                <div class="project-section__background">
-                    <span class="project-orb project-orb--sky project-orb--lg" data-parallax="0.2" style="top:-140px; right:-120px;"></span>
-                    <span class="project-orb project-orb--emerald project-orb--md" data-parallax="0.28" style="bottom:-140px; left:-120px;"></span>
+            <section id="outcomes" class="project-section">
+                <div class="project-section-header">
+                    <span class="project-badge">Expected outcomes</span>
+                    <h2 class="project-section-title font-poppins">Measuring impact across family wellbeing</h2>
+                    <p class="project-section-lead">We track how digital support influences health, behaviour, and confidence for mothers and their children.</p>
                 </div>
-                <div class="project-section__inner">
-                    <div class="project-section-header">
-                        <span class="project-badge">The vision</span>
-                        <h2 class="project-section-title">Accessible support that meets mothers where they are</h2>
-                        <p class="project-section-lead">In low-resource settings, specialised care is often out of reach. Connected Mothers turns everyday messaging into a personalised support network.</p>
-                    </div>
-                    <div class="grid gap-8 lg:grid-cols-2">
-                        <div class="info-card p-6 space-y-3">
-                            <h3 class="text-xl font-semibold text-[var(--text-dark)] font-heading">Structured messaging</h3>
-                            <p class="text-[var(--text-muted)] leading-relaxed">Evidence-based content covers mental health, nutrition, sleep hygiene, and practical strategies for weekly goal setting.</p>
-                        </div>
-                        <div class="info-card p-6 space-y-3">
-                            <h3 class="text-xl font-semibold text-[var(--text-dark)] font-heading">Community connection</h3>
-                            <p class="text-[var(--text-muted)] leading-relaxed">Peer groups share experiences and encouragement, moderated by trained health professionals to maintain safety and relevance.</p>
+                <div class="profile-highlights">
+                    <div class="profile-highlight-card">
+                        <div class="profile-highlight-icon">💬</div>
+                        <div>
+                            <h3 class="profile-highlight-title">Maternal mental health</h3>
+                            <p class="profile-highlight-copy">Reduce symptoms of depression and anxiety while boosting self-efficacy in daily care routines.</p>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section id="methodology" class="project-section project-section--accent animated-section fade-up" data-timeline data-parallax-container>
-                <div class="project-section__bg-image" data-parallax-background="0.09" style="background-image: url('../images/projects/connected-mothers-methodology-bg.jpg');"></div>
-                <div class="project-section__background">
-                    <span class="project-orb project-orb--emerald project-orb--lg" data-parallax="0.18" style="top:-150px; left:-140px;"></span>
-                    <span class="project-orb project-orb--sky project-orb--md" data-parallax="0.26" style="bottom:-150px; right:-120px;"></span>
-                </div>
-                <div class="project-section__inner">
-                    <div class="project-section-header">
-                        <span class="project-badge">Methodology</span>
-                        <h2 class="project-section-title">A randomised design with real-world reach</h2>
-                        <p class="project-section-lead">We blend clinical rigour with digital accessibility to understand what truly works for mothers and babies.</p>
-                    </div>
-                    <div class="timeline">
-                        <div class="timeline-track">
-                            <button type="button" class="timeline-step" data-timeline-trigger>
-                                <span class="timeline-step__icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                                        <circle cx="9" cy="7" r="4"></circle>
-                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                    </svg>
-                                </span>
-                                <span class="timeline-step__label">Recruitment</span>
-                            </button>
-                            <button type="button" class="timeline-step" data-timeline-trigger>
-                                <span class="timeline-step__icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="6" cy="5" r="3"></circle>
-                                        <circle cx="6" cy="19" r="3"></circle>
-                                        <circle cx="18" cy="12" r="3"></circle>
-                                        <path d="M6 8v8a3 3 0 0 0 3 3h3"></path>
-                                        <path d="M9 5h5a4 4 0 0 1 4 4"></path>
-                                    </svg>
-                                </span>
-                                <span class="timeline-step__label">Group assignment</span>
-                            </button>
-                            <button type="button" class="timeline-step" data-timeline-trigger>
-                                <span class="timeline-step__icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-9l-4 3v-3H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"></path>
-                                        <path d="M8 9h8"></path>
-                                        <path d="M8 13h6"></path>
-                                    </svg>
-                                </span>
-                                <span class="timeline-step__label">8-week intervention</span>
-                            </button>
-                            <button type="button" class="timeline-step" data-timeline-trigger>
-                                <span class="timeline-step__icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M9 3h6a2 2 0 0 1 2 2v1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1V5a2 2 0 0 1 2-2z"></path>
-                                        <path d="M9 12h6"></path>
-                                        <path d="M9 16h4"></path>
-                                    </svg>
-                                </span>
-                                <span class="timeline-step__label">Evaluation</span>
-                            </button>
-                            <button type="button" class="timeline-step" data-timeline-trigger>
-                                <span class="timeline-step__icon" aria-hidden="true">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M4 17l5-5 4 4 7-7"></path>
-                                        <path d="M16 9h5v5"></path>
-                                    </svg>
-                                </span>
-                                <span class="timeline-step__label">Scale-up</span>
-                            </button>
+                    <div class="profile-highlight-card">
+                        <div class="profile-highlight-icon">🍽️</div>
+                        <div>
+                            <h3 class="profile-highlight-title">Child nutrition & sleep</h3>
+                            <p class="profile-highlight-copy">Track improvements in feeding practices, picky eating, and sleep quality through parent-reported outcomes.</p>
                         </div>
-                        <div class="timeline-panels">
-                            <div class="timeline-panel" data-timeline-panel>
-                                <p>Participants join through the cohort network and community partners, ensuring inclusion of diverse maternal experiences.</p>
-                            </div>
-                            <div class="timeline-panel" data-timeline-panel>
-                                <p>Mothers are randomised into informative messaging, peer-support, or control groups to isolate the impact of each component.</p>
-                            </div>
-                            <div class="timeline-panel" data-timeline-panel>
-                                <p>Moderators guide weekly discussions, share multimedia resources, and encourage reflection through WhatsApp.</p>
-                            </div>
-                            <div class="timeline-panel" data-timeline-panel>
-                                <p>Validated instruments like EPDS, BISQ, and self-efficacy scales capture changes in mental health, child outcomes, and confidence.</p>
-                            </div>
-                            <div class="timeline-panel" data-timeline-panel>
-                                <p>Successful strategies are prepared for rollout with public health partners, adapting content to new communities.</p>
-                            </div>
+                    </div>
+                    <div class="profile-highlight-card">
+                        <div class="profile-highlight-icon">🌐</div>
+                        <div>
+                            <h3 class="profile-highlight-title">Scalable intervention</h3>
+                            <p class="profile-highlight-copy">Demonstrate how low-cost messaging can complement clinical care in low- and middle-income countries.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="outcomes" class="project-section project-section--contrast animated-section fade-up" data-parallax-container>
-                <div class="project-section__bg-image" data-parallax-background="0.08" style="background-image: url('../images/projects/connected-mothers-outcomes-bg.jpg');"></div>
-                <div class="project-section__background">
-                    <span class="project-orb project-orb--halo project-orb--lg" data-parallax="0.22" style="top:-190px; right:-150px;"></span>
-                    <span class="project-orb project-orb--emerald project-orb--sm" data-parallax="0.32" style="bottom:-150px; left:-110px;"></span>
+            <section id="support" class="project-section">
+                <div class="project-section-header">
+                    <span class="project-badge">Support the project</span>
+                    <h2 class="project-section-title font-poppins">Help bridge the digital support gap</h2>
+                    <p class="project-section-lead">Your partnership can extend this intervention to thousands of mothers who need it most.</p>
                 </div>
-                <div class="project-section__inner">
-                    <div class="project-section-header">
-                        <span class="project-badge">Expected outcomes</span>
-                        <h2 class="project-section-title">Measuring impact across family wellbeing</h2>
-                        <p class="project-section-lead">We track how digital support influences health, behaviour, and confidence for mothers and their children.</p>
+                <div class="support-grid">
+                    <div class="support-card">
+                        <h4>Health system allies</h4>
+                        <p>Co-design rollout strategies with municipal clinics and social assistance teams.</p>
                     </div>
-                    <div class="grid gap-6 lg:grid-cols-3">
-                        <div class="support-card">
-                            <h4>Maternal mental health</h4>
-                            <p>Reduce symptoms of depression and anxiety while boosting self-efficacy in daily care routines.</p>
-                        </div>
-                        <div class="support-card">
-                            <h4>Child nutrition &amp; sleep</h4>
-                            <p>Track improvements in feeding practices, picky eating, and sleep quality through parent-reported outcomes.</p>
-                        </div>
-                        <div class="support-card">
-                            <h4>Scalable intervention</h4>
-                            <p>Demonstrate how low-cost messaging can complement clinical care in low- and middle-income countries.</p>
-                        </div>
+                    <div class="support-card">
+                        <h4>Technology partners</h4>
+                        <p>Provide messaging automation, analytics, or zero-rating support to expand reach.</p>
                     </div>
+                    <div class="support-card">
+                        <h4>Funding partners</h4>
+                        <p>Invest in moderator training, content production, and longitudinal evaluation.</p>
+                    </div>
+                </div>
+                <div class="project-cta-group mt-10">
+                    <a href="mailto:contact@gpis.org" class="project-cta">Start a partnership</a>
+                    <a href="../index.html#contact" class="project-cta secondary">Contact GPIS</a>
                 </div>
             </section>
 
-            <section id="support" class="project-section project-section--contrast animated-section fade-up" data-parallax-container>
-                <div class="project-section__bg-image" data-parallax-background="0.1" style="background-image: url('../images/projects/connected-mothers-support-bg.jpg');"></div>
-                <div class="project-section__background">
-                    <span class="project-orb project-orb--halo project-orb--lg" data-parallax="0.24" style="top:-200px; right:-160px;"></span>
-                    <span class="project-orb project-orb--emerald project-orb--sm" data-parallax="0.34" style="bottom:-150px; left:-120px;"></span>
-                </div>
-                <div class="project-section__inner">
-                    <div class="project-section-header">
-                        <span class="project-badge">Support the project</span>
-                        <h2 class="project-section-title">Help bridge the digital support gap</h2>
-                        <p class="project-section-lead">Your partnership can extend this intervention to thousands of mothers who need it most.</p>
-                    </div>
-                    <div class="support-grid">
-                        <div class="support-card">
-                            <h4>Health system allies</h4>
-                            <p>Co-design rollout strategies with municipal clinics and social assistance teams.</p>
-                        </div>
-                        <div class="support-card">
-                            <h4>Technology partners</h4>
-                            <p>Provide messaging automation, analytics, or zero-rating support to expand reach.</p>
-                        </div>
-                        <div class="support-card">
-                            <h4>Funding partners</h4>
-                            <p>Invest in moderator training, content production, and longitudinal evaluation.</p>
-                        </div>
-                    </div>
-                    <div class="project-cta-group mt-10">
-                        <a href="mailto:contact@gpis.org" class="project-cta">Start a partnership</a>
-                        <a href="../index.html#contact" class="project-cta secondary">Contact GPIS</a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="project-section project-section--accent animated-section fade-up" data-parallax-container>
-                <div class="project-section__bg-image" data-parallax-background="0.09" style="background-image: url('../images/projects/connected-mothers-team-bg.jpg');"></div>
-                <div class="project-section__background">
-                    <span class="project-orb project-orb--sky project-orb--sm" data-parallax="0.22" style="top:-90px; right:-80px;"></span>
-                </div>
-                <div class="project-section__inner">
-                    <div class="project-section-header">
-                        <span class="project-badge">Project team</span>
-                        <h2 class="project-section-title">Key Researchers on This Project</h2>
-                        <p class="project-section-lead">Meet the GPIS scientists guiding the design, analytics, and implementation of Mothers Connected.</p>
-                    </div>
-                    <div class="project-key-team">
-                        <a href="../researchers/rafaela-costa-martins.html" class="project-key-team__member">
-                            <img src="../images/rafaela_martins.png" alt="Headshot of Rafaela Costa Martins" class="project-key-team__avatar">
-                            <div class="project-key-team__info">
-                                <span class="project-key-team__name">Rafaela Costa Martins</span>
-                                <span class="project-key-team__role">Digital intervention lead</span>
-                            </div>
-                        </a>
-                        <a href="../researchers/thais-martins-da-silva.html" class="project-key-team__member">
-                            <img src="../images/thais_martins.png" alt="Headshot of Thais Martins da Silva" class="project-key-team__avatar">
-                            <div class="project-key-team__info">
-                                <span class="project-key-team__name">Thais Martins da Silva</span>
-                                <span class="project-key-team__role">Maternal nutrition specialist</span>
-                            </div>
-                        </a>
-                        <a href="../researchers/cauane-blumenberg-silva.html" class="project-key-team__member">
-                            <img src="../images/cauane.png" alt="Headshot of Cauane Blumenberg Silva" class="project-key-team__avatar">
-                            <div class="project-key-team__info">
-                                <span class="project-key-team__name">Cauane Blumenberg Silva</span>
-                                <span class="project-key-team__role">Data science &amp; analytics</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="project-directory animated-section fade-up" data-parallax-container>
-                <span class="project-orb project-orb--halo project-orb--lg" data-parallax="0.22" style="top:-160px; right:-200px;"></span>
-                <span class="project-orb project-orb--emerald project-orb--sm" data-parallax="0.3" style="bottom:-150px; left:-120px;"></span>
-                <h2 class="font-heading">Keep exploring our research</h2>
+            <section class="project-directory">
+                <h2 class="text-2xl font-bold text-white font-poppins mb-4">Keep exploring our research</h2>
                 <div class="project-directory-list">
                     <a href="rio-grande-2019-birth-cohort.html"><span>Rio Grande 2019 Birth Cohort</span><span>→</span></a>
-                    <a href="the-right-gaze.html"><span>The Right Gaze: Technology &amp; Emotion</span><span>→</span></a>
+                    <a href="the-right-gaze.html"><span>The Right Gaze: Technology & Emotion</span><span>→</span></a>
                     <a href="data-linkage.html"><span>Data Linkage: Unlocking Insights</span><span>→</span></a>
                     <a href="crisis-alert.html"><span>Crisis Alert: Mental Health in Crises</span><span>→</span></a>
                 </div>
@@ -312,27 +178,9 @@
         </div>
     </main>
 
-    <footer class="bg-[var(--bg-secondary)] text-[var(--text-dark)] mt-24 border-t border-slate-200">
-        <div class="container mx-auto px-6 py-12 space-y-6 text-center text-sm text-[var(--text-muted)]">
-            <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[var(--text-dark)]">
-                <a href="mailto:contact@gpis.org" class="hover:text-[var(--primary-color)] transition-colors">Email</a>
-                <span class="hidden opacity-50 sm:inline">|</span>
-                <a href="https://www.instagram.com/coorterg2019/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary-color)] transition-colors">Instagram</a>
-                <span class="hidden opacity-50 sm:inline">|</span>
-                <a href="https://wa.me/5553997133420" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary-color)] transition-colors">WhatsApp</a>
-                <span class="hidden opacity-50 sm:inline">|</span>
-                <a href="https://www.facebook.com/coorterg2019/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary-color)] transition-colors">Facebook</a>
-                <span class="hidden opacity-50 sm:inline">|</span>
-                <a href="https://www.ncbi.nlm.nih.gov/sites/myncbi/christian.loret%20de%20mola.1/collections/65988568/public/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary-color)] transition-colors">Publications</a>
-            </div>
-            <div class="flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
-                <p class="mx-auto md:mx-0">© <span data-current-year></span> GPIS — Rio Grande, Brazil. All rights reserved.</p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="../index.html#projects" class="hover:text-[var(--primary-color)]">Projects</a>
-                    <a href="../index.html#members" class="hover:text-[var(--primary-color)]">Researchers</a>
-                    <a href="../index.html#contact" class="hover:text-[var(--primary-color)]">Contact</a>
-                </div>
-            </div>
+    <footer class="bg-[var(--bg-secondary)] text-[var(--text-dark)] mt-24">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <p class="text-sm text-[var(--text-muted)]">© <span data-current-year></span> GPIS — Rio Grande, Brazil. All rights reserved.</p>
         </div>
     </footer>
 

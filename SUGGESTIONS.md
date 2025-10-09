@@ -4,7 +4,7 @@
 1. **Restore the Portuguese Landing Page**  
    The header includes a language switcher link to `index-pt.html`, but that file is missing, which creates a broken navigation experience for Portuguese-speaking visitors. Add the localized page or point the link at an existing resource so the toggle works.【F:index.html†L129-L141】
 2. **Fix the Instagram Link Styling**  
-   The Instagram footer link concatenates `hover:text-[var(--primary-color)]` with `transition-colors` (missing a space), so the hover transition never triggers. Insert the missing space to make the hover effect consistent with the other social links.【F:index.html†L346-L364】
+   The Instagram footer link concatenates `hover:text-[--primary-color]` with `transition-colors` (missing a space), so the hover transition never triggers. Insert the missing space to make the hover effect consistent with the other social links.【F:index.html†L346-L364】
 3. **Align Cohort Size Figures**  
    The Impact section highlights "2,000+" mothers and children, while the Projects section references "over 2,300." Standardize the cohort count to avoid confusing readers.【F:index.html†L210-L236】【F:index.html†L276-L308】
 

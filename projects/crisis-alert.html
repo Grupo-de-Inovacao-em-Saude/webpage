@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="See how the GPIS Crisis Alert project monitors COVID-19 and RS flood impacts on families, combining surveys, AI, and policy partnerships for rapid response.">
     <title>Crisis Alert | GPIS Projects</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Work+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/site.css">
 </head>
 <body class="bg-[var(--bg-primary)] text-[var(--text-dark)]">
@@ -16,7 +16,7 @@
 
     <header id="main-header" class="fixed top-0 left-0 w-full bg-[var(--header-bg)]/60 backdrop-blur-md z-40">
         <div class="container mx-auto px-6 py-5 flex items-center justify-between">
-            <a href="../index.html" class="font-heading font-semibold text-xl text-[var(--text-dark)] tracking-wide hover:text-[var(--primary-color)] transition-colors">GPIS Projects</a>
+            <a href="../index.html" class="font-poppins font-semibold text-xl text-[var(--text-dark)] tracking-wide hover:text-[var(--primary-color)] transition-colors">GPIS Projects</a>
             <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-[var(--text-muted)]">
                 <a href="#overview" class="nav-link-effect">Overview</a>
                 <a href="#crises" class="nav-link-effect">Crises</a>
@@ -33,219 +33,132 @@
         </div>
     </header>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <div class="breadcrumb__container">
-            <ol class="breadcrumb__list">
-                <li><a href="../index.html">Home</a></li>
-                <li class="breadcrumb__separator" aria-hidden="true">›</li>
-                <li><a href="../index.html#projects">Projects</a></li>
-                <li class="breadcrumb__separator" aria-hidden="true">›</li>
-                <li class="breadcrumb__current" aria-current="page">Crisis Alert</li>
-            </ol>
-        </div>
-    </nav>
-
     <main class="pt-36 pb-24">
         <div class="container mx-auto px-6 space-y-16 md:space-y-24">
-            <section class="project-hero animated-section fade-up" data-parallax-container>
-                <div class="project-hero__background">
-                    <span class="project-orb project-orb--emerald project-orb--xl" data-parallax="0.18" style="top:-160px; right:-150px;"></span>
-                    <span class="project-orb project-orb--sky project-orb--lg" data-parallax="0.22" style="bottom:-220px; left:-160px;"></span>
-                    <span class="project-orb project-orb--halo project-orb--sm" data-parallax="0.26" style="top:42%; left:58%;"></span>
+            <section class="project-hero" data-parallax-container>
+                <div class="profile-hero__background">
+                    <span class="parallax-shape parallax-shape--xl parallax-shape--green" data-parallax="0.2" style="top:-140px; right:-150px;"></span>
+                    <span class="parallax-shape parallax-shape--lg parallax-shape--blue" data-parallax="0.16" style="bottom:-120px; left:-160px;"></span>
+                    <span class="parallax-shape parallax-shape--sm parallax-shape--teal" data-parallax="0.22" style="top:50%; left:60%;"></span>
                 </div>
-                <div class="project-hero__layout">
-                    <div class="project-hero__content">
+                <div class="project-hero__layout relative z-10">
+                    <div>
                         <span class="project-hero__eyebrow">Rapid-response research</span>
-                        <h1 class="project-hero__title">Crisis Alert: Tracking the Mental Health Footprint of COVID-19 and the RS Floods</h1>
+                        <h1 class="project-hero__title font-poppins">Crisis Alert: Tracking the Mental Health Footprint of COVID-19 and the RS Floods</h1>
                         <p class="project-hero__lead">When crises hit, our cohort becomes an early-warning system. We documented how the pandemic and 2024 floods transformed daily life, stress, and resilience.</p>
                         <div class="project-cta-group">
                             <a href="#cta" class="project-cta">Support our response</a>
                             <a href="../index.html#projects" class="project-cta secondary">Back to Projects</a>
                         </div>
-                        <div class="project-stat-grid">
-                            <div class="project-stat-card">
-                                <strong>2 converging crises</strong>
-                                <span>COVID-19 and the RS floods analysed side-by-side for compounded impact.</span>
-                            </div>
-                            <div class="project-stat-card">
-                                <strong>Real-time listening</strong>
-                                <span>Online and phone surveys captured fear, routine shifts, and support needs as events unfolded.</span>
-                            </div>
-                            <div class="project-stat-card">
-                                <strong>AI-assisted insight</strong>
-                                <span>Emotion recognition tools reveal subtle changes in parenting synchrony after disaster.</span>
-                            </div>
+                    </div>
+                    <div class="project-hero__media">
+                        <img src="../images/family-impact.png" alt="Family navigating crisis" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <section id="overview" class="project-section">
+                <div class="project-section-header">
+                    <span class="project-badge">Why now</span>
+                    <h2 class="project-section-title font-poppins">Capturing crises in real time</h2>
+                    <p class="project-section-lead">Our longitudinal design allowed us to pivot quickly, measuring emotional, social, and physical impacts exactly when families needed support.</p>
+                </div>
+                <div class="grid gap-8 lg:grid-cols-2">
+                    <div class="info-card p-6 space-y-3">
+                        <h3 class="text-xl font-semibold text-[var(--text-dark)] font-poppins">COVID-19 adaptation</h3>
+                        <p class="text-[var(--text-muted)] leading-relaxed">Online surveys monitored maternal depression, anxiety, and changes in routine, work, and caregiving during the pandemic&apos;s peak uncertainty.</p>
+                    </div>
+                    <div class="info-card p-6 space-y-3">
+                        <h3 class="text-xl font-semibold text-[var(--text-dark)] font-poppins">Flood response (RS 2024)</h3>
+                        <p class="text-[var(--text-muted)] leading-relaxed">A dedicated follow-up assessed mental health trajectories before and after the floods, comparing displaced families with those who sheltered in place.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="crises" class="project-section">
+                <div class="project-section-header">
+                    <span class="project-badge">Multi-layered analysis</span>
+                    <h2 class="project-section-title font-poppins">Understanding who is most vulnerable</h2>
+                    <p class="project-section-lead">Our multidimensional framework blends geography, socioeconomics, and lived experience to prioritise support.</p>
+                </div>
+                <div class="profile-highlights">
+                    <div class="profile-highlight-card">
+                        <div class="profile-highlight-icon">🗺️</div>
+                        <div>
+                            <h3 class="profile-highlight-title">Geospatial risk</h3>
+                            <p class="profile-highlight-copy">Map impact zones, displacement duration, and material losses across Rio Grande do Sul.</p>
                         </div>
                     </div>
-                    <div class="project-hero__visual">
-                        <span class="project-hero__halo"></span>
-                        <div class="project-hero__visual-frame">
-                            <a href="../images/crisis-alert-hero.png" class="project-hero__visual-link">View Crisis Alert hero placeholder</a>
+                    <div class="profile-highlight-card">
+                        <div class="profile-highlight-icon">🤝</div>
+                        <div>
+                            <h3 class="profile-highlight-title">Social determinants</h3>
+                            <p class="profile-highlight-copy">Layer income, employment, and support networks to see which families need urgent resources.</p>
+                        </div>
+                    </div>
+                    <div class="profile-highlight-card">
+                        <div class="profile-highlight-icon">🧠</div>
+                        <div>
+                            <h3 class="profile-highlight-title">Mental health trajectories</h3>
+                            <p class="profile-highlight-copy">Track how stress, fear, and resilience evolve over time, identifying protective factors.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="overview" class="project-section project-section--accent animated-section fade-up" data-parallax-container>
-                <div class="project-section__bg-image" data-parallax-background="0.1" style="background-image: url('../images/projects/crisis-alert-overview-bg.jpg');"></div>
-                <div class="project-section__background">
-                    <span class="project-orb project-orb--emerald project-orb--lg" data-parallax="0.2" style="top:-140px; right:-120px;"></span>
-                    <span class="project-orb project-orb--sky project-orb--md" data-parallax="0.3" style="bottom:-140px; left:-120px;"></span>
+            <section id="innovation" class="project-section">
+                <div class="project-section-header">
+                    <span class="project-badge">Innovation in crisis</span>
+                    <h2 class="project-section-title font-poppins">AI reveals the unseen impact</h2>
+                    <p class="project-section-lead">We combine qualitative empathy with quantitative precision to understand intergenerational stress.</p>
                 </div>
-                <div class="project-section__inner">
-                    <div class="project-section-header">
-                        <span class="project-badge">Why now</span>
-                        <h2 class="project-section-title">Capturing crises in real time</h2>
-                        <p class="project-section-lead">Our longitudinal design allowed us to pivot quickly, measuring emotional, social, and physical impacts exactly when families needed support.</p>
+                <div class="grid gap-10 lg:grid-cols-2">
+                    <div class="video-placeholder">
+                        <div class="video-placeholder__content">
+                            <div class="video-placeholder__button">▶</div>
+                            <h3 class="text-xl font-semibold text-[var(--text-dark)] font-poppins">AI spotlight</h3>
+                            <p class="mt-2 text-[var(--text-muted)]">Future visualisations will show how emotion recognition tools detect shifts in synchrony after crises.</p>
+                        </div>
                     </div>
-                    <div class="grid gap-8 lg:grid-cols-2">
-                        <div class="info-card p-6 space-y-3">
-                            <h3 class="text-xl font-semibold text-[var(--text-dark)] font-heading">COVID-19 adaptation</h3>
-                            <p class="text-[var(--text-muted)] leading-relaxed">Online surveys monitored maternal depression, anxiety, and changes in routine, work, and caregiving during the pandemic&apos;s peak uncertainty.</p>
-                        </div>
-                        <div class="info-card p-6 space-y-3">
-                            <h3 class="text-xl font-semibold text-[var(--text-dark)] font-heading">Flood response (RS 2024)</h3>
-                            <p class="text-[var(--text-muted)] leading-relaxed">A dedicated follow-up assessed mental health trajectories before and after the floods, comparing displaced families with those who sheltered in place.</p>
-                        </div>
+                    <div class="space-y-6 text-[var(--text-muted)] leading-relaxed">
+                        <p><strong class="text-[var(--text-dark)]">Emotional analytics:</strong> Compare interaction patterns in flood-affected vs. non-affected families.</p>
+                        <p><strong class="text-[var(--text-dark)]">Longitudinal rigor:</strong> Link crisis exposure to existing mental health data to pinpoint resilience boosters.</p>
+                        <p><strong class="text-[var(--text-dark)]">Policy-ready dashboards:</strong> Communicate findings to civil defence teams planning future responses.</p>
                     </div>
                 </div>
             </section>
 
-            <section id="crises" class="project-section project-section--contrast animated-section fade-up" data-parallax-container>
-                <div class="project-section__bg-image" data-parallax-background="0.1" style="background-image: url('../images/projects/crisis-alert-crises-bg.jpg');"></div>
-                <div class="project-section__background">
-                    <span class="project-orb project-orb--halo project-orb--lg" data-parallax="0.24" style="top:-200px; left:-150px;"></span>
-                    <span class="project-orb project-orb--emerald project-orb--sm" data-parallax="0.32" style="bottom:-150px; right:-110px;"></span>
+            <section id="cta" class="project-section">
+                <div class="project-section-header">
+                    <span class="project-badge">Call to action</span>
+                    <h2 class="project-section-title font-poppins">Help us turn crisis data into policy</h2>
+                    <p class="project-section-lead">Your collaboration ensures families get the mental health support they deserve after disasters.</p>
                 </div>
-                <div class="project-section__inner">
-                    <div class="project-section-header">
-                        <span class="project-badge">Multi-layered analysis</span>
-                        <h2 class="project-section-title">Understanding who is most vulnerable</h2>
-                        <p class="project-section-lead">Our multidimensional framework blends geography, socioeconomics, and lived experience to prioritise support.</p>
+                <div class="support-grid">
+                    <div class="support-card">
+                        <h4>Policy partnerships</h4>
+                        <p>Co-design interventions with municipal and state health teams informed by real-time evidence.</p>
                     </div>
-                    <div class="grid gap-6 lg:grid-cols-3">
-                        <div class="support-card">
-                            <h4>Geospatial risk</h4>
-                            <p>Map impact zones, displacement duration, and material losses across Rio Grande do Sul.</p>
-                        </div>
-                        <div class="support-card">
-                            <h4>Social determinants</h4>
-                            <p>Layer income, employment, and support networks to see which families need urgent resources.</p>
-                        </div>
-                        <div class="support-card">
-                            <h4>Mental health trajectories</h4>
-                            <p>Track how stress, fear, and resilience evolve over time, identifying protective factors.</p>
-                        </div>
+                    <div class="support-card">
+                        <h4>Humanitarian alliances</h4>
+                        <p>Work with NGOs and civil defence to translate findings into relief and preparedness strategies.</p>
                     </div>
+                    <div class="support-card">
+                        <h4>Research expansions</h4>
+                        <p>Bring additional lenses—climate justice, social work, behavioural science—to enrich the dataset.</p>
+                    </div>
+                </div>
+                <div class="project-cta-group mt-10">
+                    <a href="mailto:contact@gpis.org" class="project-cta">Collaborate with us</a>
+                    <a href="../index.html#contact" class="project-cta secondary">Contact GPIS</a>
                 </div>
             </section>
 
-            <section id="innovation" class="project-section project-section--accent animated-section fade-up" data-parallax-container>
-                <div class="project-section__bg-image" data-parallax-background="0.09" style="background-image: url('../images/projects/crisis-alert-innovation-bg.jpg');"></div>
-                <div class="project-section__background">
-                    <span class="project-orb project-orb--sky project-orb--lg" data-parallax="0.2" style="top:-140px; right:-120px;"></span>
-                    <span class="project-orb project-orb--emerald project-orb--md" data-parallax="0.3" style="bottom:-150px; left:-130px;"></span>
-                </div>
-                <div class="project-section__inner">
-                    <div class="project-section-header">
-                        <span class="project-badge">Innovation in crisis</span>
-                        <h2 class="project-section-title">AI reveals the unseen impact</h2>
-                        <p class="project-section-lead">We combine qualitative empathy with quantitative precision to understand intergenerational stress.</p>
-                    </div>
-                    <div class="grid gap-10 lg:grid-cols-2">
-                        <div class="project-hero__visual-frame flex items-center justify-center">
-                            <div class="video-placeholder__content text-center">
-                                <div class="video-placeholder__button">▶</div>
-                                <h3 class="text-xl font-semibold text-[var(--text-dark)] font-heading">AI spotlight</h3>
-                                <p class="mt-2 text-[var(--text-muted)]">Future visualisations will show how emotion recognition tools detect shifts in synchrony after crises.</p>
-                            </div>
-                        </div>
-                        <div class="space-y-6 text-[var(--text-muted)] leading-relaxed">
-                            <p><strong class="text-[var(--text-dark)]">Emotional analytics:</strong> Compare interaction patterns in flood-affected vs. non-affected families.</p>
-                            <p><strong class="text-[var(--text-dark)]">Longitudinal rigor:</strong> Link crisis exposure to existing mental health data to pinpoint resilience boosters.</p>
-                            <p><strong class="text-[var(--text-dark)]">Policy-ready dashboards:</strong> Communicate findings to civil defence teams planning future responses.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="cta" class="project-section project-section--contrast animated-section fade-up" data-parallax-container>
-                <div class="project-section__bg-image" data-parallax-background="0.1" style="background-image: url('../images/projects/crisis-alert-cta-bg.jpg');"></div>
-                <div class="project-section__background">
-                    <span class="project-orb project-orb--halo project-orb--lg" data-parallax="0.24" style="top:-200px; right:-150px;"></span>
-                    <span class="project-orb project-orb--emerald project-orb--sm" data-parallax="0.34" style="bottom:-160px; left:-120px;"></span>
-                </div>
-                <div class="project-section__inner">
-                    <div class="project-section-header">
-                        <span class="project-badge">Call to action</span>
-                        <h2 class="project-section-title">Help us turn crisis data into policy</h2>
-                        <p class="project-section-lead">Your collaboration ensures families get the mental health support they deserve after disasters.</p>
-                    </div>
-                    <div class="support-grid">
-                        <div class="support-card">
-                            <h4>Policy partnerships</h4>
-                            <p>Co-design interventions with municipal and state health teams informed by real-time evidence.</p>
-                        </div>
-                        <div class="support-card">
-                            <h4>Humanitarian alliances</h4>
-                            <p>Work with NGOs and civil defence to translate findings into relief and preparedness strategies.</p>
-                        </div>
-                        <div class="support-card">
-                            <h4>Research expansions</h4>
-                            <p>Bring additional lenses—climate justice, social work, behavioural science—to enrich the dataset.</p>
-                        </div>
-                    </div>
-                    <div class="project-cta-group mt-10">
-                        <a href="mailto:contact@gpis.org" class="project-cta">Collaborate with us</a>
-                        <a href="../index.html#contact" class="project-cta secondary">Contact GPIS</a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="project-section project-section--accent animated-section fade-up" data-parallax-container>
-                <div class="project-section__bg-image" data-parallax-background="0.08" style="background-image: url('../images/projects/crisis-alert-team-bg.jpg');"></div>
-                <div class="project-section__background">
-                    <span class="project-orb project-orb--sky project-orb--sm" data-parallax="0.24" style="top:-110px; right:-90px;"></span>
-                </div>
-                <div class="project-section__inner">
-                    <div class="project-section-header">
-                        <span class="project-badge">Project team</span>
-                        <h2 class="project-section-title">Key Researchers on This Project</h2>
-                        <p class="project-section-lead">The Crisis Alert response blends longitudinal expertise, mental health science, and community partnerships.</p>
-                    </div>
-                    <div class="project-key-team">
-                        <a href="../researchers/christian-loret-de-mola-zanatti.html" class="project-key-team__member">
-                            <img src="../images/christian-loret-de-mola-zanatti.png" alt="Headshot of Christian Loret de Mola Zanatti" class="project-key-team__avatar">
-                            <div class="project-key-team__info">
-                                <span class="project-key-team__name">Christian Loret de Mola Zanatti</span>
-                                <span class="project-key-team__role">Principal investigator</span>
-                            </div>
-                        </a>
-                        <a href="../researchers/thais-martins-da-silva.html" class="project-key-team__member">
-                            <img src="../images/thais_martins.png" alt="Headshot of Thais Martins da Silva" class="project-key-team__avatar">
-                            <div class="project-key-team__info">
-                                <span class="project-key-team__name">Thais Martins da Silva</span>
-                                <span class="project-key-team__role">Maternal mental health lead</span>
-                            </div>
-                        </a>
-                        <a href="../researchers/romina-buffarini.html" class="project-key-team__member">
-                            <img src="../images/romina_buffarini.png" alt="Headshot of Romina Buffarini" class="project-key-team__avatar">
-                            <div class="project-key-team__info">
-                                <span class="project-key-team__name">Romina Buffarini</span>
-                                <span class="project-key-team__role">Nutrition &amp; equity insights</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="project-directory animated-section fade-up" data-parallax-container>
-                <span class="project-orb project-orb--halo project-orb--lg" data-parallax="0.22" style="top:-160px; right:-200px;"></span>
-                <span class="project-orb project-orb--emerald project-orb--sm" data-parallax="0.3" style="bottom:-150px; left:-120px;"></span>
-                <h2 class="font-heading">Explore other bold initiatives</h2>
+            <section class="project-directory">
+                <h2 class="text-2xl font-bold text-white font-poppins mb-4">Explore other bold initiatives</h2>
                 <div class="project-directory-list">
                     <a href="rio-grande-2019-birth-cohort.html"><span>Rio Grande 2019 Birth Cohort</span><span>→</span></a>
-                    <a href="the-right-gaze.html"><span>The Right Gaze: Technology &amp; Emotion</span><span>→</span></a>
+                    <a href="the-right-gaze.html"><span>The Right Gaze: Technology & Emotion</span><span>→</span></a>
                     <a href="data-linkage.html"><span>Data Linkage: Unlocking Insights</span><span>→</span></a>
                     <a href="connected-mothers.html"><span>Connected Mothers: WhatsApp Support</span><span>→</span></a>
                 </div>
@@ -253,27 +166,9 @@
         </div>
     </main>
 
-    <footer class="bg-[var(--bg-secondary)] text-[var(--text-dark)] mt-24 border-t border-slate-200">
-        <div class="container mx-auto px-6 py-12 space-y-6 text-center text-sm text-[var(--text-muted)]">
-            <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[var(--text-dark)]">
-                <a href="mailto:contact@gpis.org" class="hover:text-[var(--primary-color)] transition-colors">Email</a>
-                <span class="hidden opacity-50 sm:inline">|</span>
-                <a href="https://www.instagram.com/coorterg2019/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary-color)] transition-colors">Instagram</a>
-                <span class="hidden opacity-50 sm:inline">|</span>
-                <a href="https://wa.me/5553997133420" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary-color)] transition-colors">WhatsApp</a>
-                <span class="hidden opacity-50 sm:inline">|</span>
-                <a href="https://www.facebook.com/coorterg2019/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary-color)] transition-colors">Facebook</a>
-                <span class="hidden opacity-50 sm:inline">|</span>
-                <a href="https://www.ncbi.nlm.nih.gov/sites/myncbi/christian.loret%20de%20mola.1/collections/65988568/public/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary-color)] transition-colors">Publications</a>
-            </div>
-            <div class="flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
-                <p class="mx-auto md:mx-0">© <span data-current-year></span> GPIS — Rio Grande, Brazil. All rights reserved.</p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="../index.html#projects" class="hover:text-[var(--primary-color)]">Projects</a>
-                    <a href="../index.html#members" class="hover:text-[var(--primary-color)]">Researchers</a>
-                    <a href="../index.html#contact" class="hover:text-[var(--primary-color)]">Contact</a>
-                </div>
-            </div>
+    <footer class="bg-[var(--bg-secondary)] text-[var(--text-dark)] mt-24">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <p class="text-sm text-[var(--text-muted)]">© <span data-current-year></span> GPIS — Rio Grande, Brazil. All rights reserved.</p>
         </div>
     </footer>
 

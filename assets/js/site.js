@@ -69,24 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateParallax);
   }
 
-  const parallaxBackgrounds = document.querySelectorAll('[data-parallax-background]');
-  if (parallaxBackgrounds.length > 0) {
-    const updateBackgroundParallax = () => {
-      parallaxBackgrounds.forEach((background) => {
-        const speed = parseFloat(background.dataset.parallaxBackground) || 0.12;
-        const container = background.closest('[data-parallax-container]') || background.parentElement;
-        if (!container) return;
-        const rect = container.getBoundingClientRect();
-        const offset = rect.top * speed;
-        background.style.transform = `translate3d(0, ${offset}px, 0) scale(1.02)`;
-      });
-    };
-
-    updateBackgroundParallax();
-    window.addEventListener('scroll', updateBackgroundParallax, { passive: true });
-    window.addEventListener('resize', updateBackgroundParallax);
-  }
-
   // Intersection observer for animated sections
   const animatedSections = document.querySelectorAll('.animated-section');
   if (animatedSections.length > 0) {
@@ -166,45 +148,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     startInterval();
-  }
-
-  // Interactive timelines
-  const timelines = document.querySelectorAll('[data-timeline]');
-  if (timelines.length > 0) {
-    timelines.forEach((timeline) => {
-      const triggers = timeline.querySelectorAll('[data-timeline-trigger]');
-      const panels = timeline.querySelectorAll('[data-timeline-panel]');
-
-      if (triggers.length === 0 || panels.length === 0) {
-        return;
-      }
-
-      let activeIndex = 0;
-
-      const setActive = (index) => {
-        activeIndex = index;
-        triggers.forEach((trigger, triggerIndex) => {
-          if (triggerIndex === activeIndex) {
-            trigger.classList.add('is-active');
-          } else {
-            trigger.classList.remove('is-active');
-          }
-        });
-
-        panels.forEach((panel, panelIndex) => {
-          if (panelIndex === activeIndex) {
-            panel.classList.add('is-active');
-          } else {
-            panel.classList.remove('is-active');
-          }
-        });
-      };
-
-      triggers.forEach((trigger, index) => {
-        trigger.addEventListener('click', () => setActive(index));
-      });
-
-      setActive(0);
-    });
   }
 });
