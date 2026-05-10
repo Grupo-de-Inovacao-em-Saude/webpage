@@ -88,6 +88,23 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedSections.forEach((section) => sectionObserver.observe(section));
   }
 
+
+  // Intersection observer for researcher cards (directional reveal)
+  const researcherCards = document.querySelectorAll('.researcher-reveal-card');
+  if (researcherCards.length > 0) {
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        } else {
+          entry.target.classList.remove('in-view');
+        }
+      });
+    }, { threshold: 0.18, rootMargin: '0px 0px -6% 0px' });
+
+    researcherCards.forEach((card) => cardObserver.observe(card));
+  }
+
   // Hero slider logic
   const slides = document.querySelectorAll('#home .slide');
   const dotsContainer = document.querySelector('.slider-dots');
