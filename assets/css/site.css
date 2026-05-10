@@ -371,16 +371,16 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   border: 1px solid rgba(30, 58, 138, 0.25);
-  background: rgba(30, 58, 138, 0.06);
-  color: var(--primary-color);
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  color: #fff;
   transition: all 0.25s ease;
 }
 
 .nav-link-pill:hover {
-  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-  color: #fff;
+  filter: brightness(1.05);
   border-color: transparent;
   transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(30, 58, 138, 0.24);
 }
 
 /* Alternating reveal directions for researcher cards */
@@ -397,7 +397,11 @@ body {
   transform: translateX(36px);
 }
 
-.animated-section.in-view .researcher-reveal-card {
+.researcher-reveal-card.in-view {
   opacity: 1;
   transform: translateX(0);
+}
+
+.researchers-grid .researcher-reveal-card:nth-child(3n+2) {
+  transform: translateY(28px);
 }
