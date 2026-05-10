@@ -349,3 +349,16 @@ body {
 
 .profile-highlights { display: none; }
 .profile-highlight-icon { display: none; }
+
+
+/* Subtle scroll reveal for researchers section */
+.animated-section.researchers-subtle-reveal > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.animated-section.researchers-subtle-reveal.in-view > * {
+  opacity: 1;
+  transform: translateY(0);
+}
